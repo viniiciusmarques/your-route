@@ -6,6 +6,10 @@ angular.module('starter')
     templateUrl:'templates/login.html',
     //controller:
   })
+  .state('cadUsuario',{
+    url:'/cadUsuario',
+    templateUrl:'templates/cadUsuario.html'
+  })
 
   $urlRouterProvider.otherwise('/login');
 });
