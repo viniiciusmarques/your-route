@@ -9814,3 +9814,7 @@ a.button {
   opacity: 0;
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
+
+.login {
+  background: url("../img/login.jpg") no-repeat;
+  width: 100%; }
