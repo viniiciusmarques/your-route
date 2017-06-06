@@ -21,7 +21,11 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
 
-.login{
+.backLogin{
+  background: url('../img/login.jpg') no-repeat;
+  width: 100%;
+}
+.backCad{
   background: url('../img/login.jpg') no-repeat;
   width: 100%;
 }

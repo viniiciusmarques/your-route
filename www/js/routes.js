@@ -4,11 +4,17 @@ angular.module('starter')
   .state('login',{
     url:'/login',
     templateUrl:'templates/login.html',
-    //controller:
+    controller:'userController'
   })
+
   .state('cadUsuario',{
     url:'/cadUsuario',
-    templateUrl:'templates/cadUsuario.html'
+    templateUrl:'templates/cadUsuario.html',
+    controller:'userController'
+  })
+  .state('error',{
+    url:'/error',
+    templateUrl:'templates/error.html'
   })
 
   $urlRouterProvider.otherwise('/login');
