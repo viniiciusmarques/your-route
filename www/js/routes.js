@@ -12,9 +12,13 @@ angular.module('starter')
     templateUrl:'templates/cadUsuario.html',
     controller:'userController'
   })
-  .state('error',{
-    url:'/error',
-    templateUrl:'templates/error.html'
+  .state('errorLogin',{
+    url:'/errorLogin',
+    templateUrl:'templates/errorLogin.html'
+  })
+  .state('errorCad',{
+    url:'/errorCad',
+    templateUrl:'templates/errorCad.html'
   })
 
   .state('menu',{
