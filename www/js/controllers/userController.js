@@ -2,7 +2,7 @@ angular.module('starter').controller('userController', function($scope,$state){
 
   $scope.logar = function(){
     /*logica de login */
-    $state.go('error');
+    $state.go('menu.home');
   }
 
   $scope.cadastrar = function(){

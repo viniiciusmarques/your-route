@@ -17,6 +17,21 @@ angular.module('starter')
     templateUrl:'templates/error.html'
   })
 
+  .state('menu',{
+    url:'menu',
+    templateUrl:'templates/menu.html',
+    abstract:true
+  })
+
+  .state('menu.home',{
+    url:'/home',
+    views :{
+      'Conteudo' : {
+        templateUrl: 'templates/home.html'
+      }
+    }
+  })
+
   $urlRouterProvider.otherwise('/login');
 });
 
