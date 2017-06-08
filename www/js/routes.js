@@ -4,11 +4,36 @@ angular.module('starter')
   .state('login',{
     url:'/login',
     templateUrl:'templates/login.html',
-    //controller:
+    controller:'userController'
   })
+
   .state('cadUsuario',{
     url:'/cadUsuario',
-    templateUrl:'templates/cadUsuario.html'
+    templateUrl:'templates/cadUsuario.html',
+    controller:'userController'
+  })
+  .state('errorLogin',{
+    url:'/errorLogin',
+    templateUrl:'templates/errorLogin.html'
+  })
+  .state('errorCad',{
+    url:'/errorCad',
+    templateUrl:'templates/errorCad.html'
+  })
+
+  .state('menu',{
+    url:'menu',
+    templateUrl:'templates/menu.html',
+    abstract:true
+  })
+
+  .state('menu.home',{
+    url:'/home',
+    views :{
+      'Conteudo' : {
+        templateUrl: 'templates/home.html'
+      }
+    }
   })
 
   $urlRouterProvider.otherwise('/login');
