@@ -24,6 +24,7 @@ angular.module('starter')
   .state('menu',{
     url:'menu',
     templateUrl:'templates/menu.html',
+    controller:'generalController',
     abstract:true
   })
 
@@ -31,9 +32,30 @@ angular.module('starter')
     url:'/home',
     views :{
       'Conteudo' : {
-        templateUrl: 'templates/home.html'
+        templateUrl: 'templates/home.html',
+        controller:'generalController'
       }
     }
+  })
+
+  .state('menu.route',{
+    url:'/route',
+    views:{
+      'Conteudo': {
+        templateUrl:'templates/route.html',
+        controller:'apiMaps'
+      }
+    }
+  })
+
+  .state('menu.listRoute',{
+    url:'/listRoute',
+     views:{
+       'Conteudo': {
+        templateUrl:'templates/listRoute.html',
+        controller:'generalController'
+       }
+     }
   })
 
   $urlRouterProvider.otherwise('/login');

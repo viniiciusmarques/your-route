@@ -45,7 +45,8 @@ gulp.task('js', function(){
 
 gulp.task('libsJS', function(){
   gulp.src([
-    'node_modules/sweetalert/dist/sweetalert.min.js'
+    'node_modules/sweetalert/dist/sweetalert.min.js',
+    'node_modules/ng-cordova/dist/ng-cordova.js'
   ])
   .pipe(concat('libs.min.js'))
   .pipe(uglify())

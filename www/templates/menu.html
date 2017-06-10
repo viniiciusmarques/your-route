@@ -1,4 +1,4 @@
-<ion-side-menus>
+<ion-side-menus data-ng-init="dadosLocalizacao()">
   <ion-side-menu-content>
     <ion-nav-bar class="bar bar-header bar-stable">
       <ion-nav-buttons side="left">
@@ -12,16 +12,47 @@
       <h1 class="title" align-title="center">Menu</h1>
     </ion-header-bar>
     <ion-content>
+      <div class="list">
+        <div class="item item-divider">
+          <h4>{{dados}}</h4>
+        </div>
+        <div class="item">
+          <img src="img/teste.png" align="left">
+          <p>
+            <strong>Rafael Lima</strong><br>Motorista
+          </p>
+        </div>
+      </div>
       <ion-list>
-        <ion-item menu-close class="item-icon-left" ui-sref="login">
+        <ion-item menu-close class="item-icon-left" ui-sref="menu.home">
           <i class="icon ion-ios-home placeholder-icon"></i>
           Home
         </ion-item>
-
-        <ion-item menu-close class="item-icon-left" ui-sref="login">
-          <i class="icon ion-power placeholder-icon"></i>
-          Sair
+        <ion-item menu-close class="item-icon-left" ui-sref="menu.listRoute">
+          <i class="icon ion-ios-location placeholder-icon"></i>
+          Minhas Rotas
         </ion-item>
+        <ion-item menu-close class="item-icon-left" ui-sref="#">
+          <i class="icon ion-map placeholder-icon"></i>
+          Paradas <br>
+          <sub>(Postos, Alimentação e Hoteis)</sub>
+        </ion-item>
+        <ion-item menu-close class="item-icon-left" ui-sref="#">
+          <i class="icon ion-settings placeholder-icon"></i>
+          Configurações
+        </ion-item>
+        <ion-item menu-close class="item-icon-left" ui-sref="#">
+          <i class="icon ion-help placeholder-icon"></i>
+          Ajuda
+        </ion-item>
+
+        <a ui-sref="login" class="button button-full button-assertive">
+          <i class="icon ion-power placeholder-icon" style="color:white"></i>
+          Sair
+        </a>
+        <!-- <ion-item menu-close class="item-icon-left" ui-sref="login">
+
+        </ion-item> -->
       </ion-list>
     </ion-content>
   </ion-side-menu>
