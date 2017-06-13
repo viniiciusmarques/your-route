@@ -1,9 +1,6 @@
 angular.module('starter').controller('generalController',function($scope, $state, $cordovaGeolocation, $http, $rootScope){
 
-//GOOGLE MAPS
-//Exibição de mapa
   var options = {timeout: 10000, enableHighAccuracy: true};
-//FIM GOOGLE MAPS
 
 //função de dados "cidade, dia semana, dia, mes e ano"
  $scope.dadosLocalizacao = function(){
@@ -29,7 +26,46 @@ angular.module('starter').controller('generalController',function($scope, $state
    });
  }
 
+/* Filtro */
+ $scope.filtros = [
+     'DataPartida','DataEntrega', 'Distancia', 'destino', 'partida'
+   ];
 
+/* Rotas fantasia */
+$scope.rotas = [
+  {id:1, DataPartida:'10/06/2017',DataEntrega:'12/06/2017' ,partida:'São Paulo', destino:'Franca'},
+  {id:2, DataPartida:'15/06/2017',DataEntrega:'16/06/2017' ,partida:'Rio de Janeiro', destino:'Goiania'},
+  {id:3, DataPartida:'12/06/2017',DataEntrega:'14/06/2017' ,partida:'Aramina', destino:'Cristais Paulista'}
+];
+$scope.visualizarRota = function($rota){
 
+  $state.go('menu.route');
 
+  //Instanciar o DistanceMatrixService
+  var service = new google.maps.DistanceMatrixService();
+  //executar o DistanceMatrixService
+  service.getDistanceMatrix(
+    {
+        //Origem
+        origins: [$rota.partida],
+        //Destino
+        destinations: [$rota.destino],
+        //Modo (DRIVING | WALKING | BICYCLING)
+        travelMode: google.maps.TravelMode.DRIVING,
+        //Sistema de medida (METRIC | IMPERIAL)
+        unitSystem: google.maps.UnitSystem.METRIC
+        //Vai chamar o callback
+    }, callback);
+    //Tratar o retorno do DistanceMatrixService
+    function callback(response, status) {
+        if (status == google.maps.DistanceMatrixStatus.OK)
+            $("#map").attr("src", "https://maps.google.com/maps?saddr=" + response.originAddresses + "&daddr=" + response.destinationAddresses + "&output=embed");
+        }
+}
+
+ $scope.verificaRota = function($rota) {
+   $state.go('menu.detalheRota');
+   $scope.detalheRota = $rota;
+ }
+console.log($scope.rotas);
 });
