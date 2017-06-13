@@ -58,6 +58,16 @@ angular.module('starter')
      }
   })
 
+  .state('menu.detalheRota',{
+    url:'/detalheRota',
+     views:{
+       'Conteudo': {
+        templateUrl:'templates/detalheRota.html',
+        controller:'generalController'
+       }
+     }
+  })
+
   $urlRouterProvider.otherwise('/login');
 });
 

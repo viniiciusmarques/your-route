@@ -3,6 +3,24 @@
     <h1 class="title">Rotas</h1>
   </ion-nav-title>
   <ion-content>
-    
+    <button  class="button button-block button-positive" cancel-search-button="Limpar" search-placeholder="Pesquisar" cancel-button="Cancelar" reset-button="Limpar" modal-select="" ng-model="filtro" options="filtros" has-search="true" modal-title="Selecione o Filtro">
+      ORDENAR POR: {{filtro}}
+      <div class="option">
+        {{option}}
+      </div>
+    </button>
+    <ion-list>
+      <ion-item ng-repeat="rota in rotas |  orderBy: filtro" can-swipe="swipe">
+        <ul style="list-style-type:none">
+          <li>Partida: {{rota.partida}}</li>
+          <li>Destino: {{rota.destino}}</li>
+          <li>Data de Partida: {{rota.DataPartida}}</li>
+          <li>Data de Entrega: {{rota.DataEntrega}}</li>
+        </ul>
+        <ion-option-button class="button-energized" ng-click="verificaRota(rota)">
+          <i class="icon ion-information-circled"></i>
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
   </ion-content>
 </ion-view>
