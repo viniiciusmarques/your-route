@@ -31,12 +31,6 @@ angular.module('starter').controller('generalController',function($scope, $state
      'DataPartida','DataEntrega', 'Distancia', 'destino', 'partida'
    ];
 
-/* Rotas fantasia */
-$scope.rotas = [
-  {id:1, DataPartida:'10/06/2017',DataEntrega:'12/06/2017' ,partida:'São Paulo', destino:'Franca'},
-  {id:2, DataPartida:'15/06/2017',DataEntrega:'16/06/2017' ,partida:'Rio de Janeiro', destino:'Goiania'},
-  {id:3, DataPartida:'12/06/2017',DataEntrega:'14/06/2017' ,partida:'Aramina', destino:'Cristais Paulista'}
-];
 $scope.visualizarRota = function($rota){
 
   $state.go('menu.route');
@@ -67,5 +61,5 @@ $scope.visualizarRota = function($rota){
    $state.go('menu.detalheRota');
    $scope.detalheRota = $rota;
  }
-console.log($scope.rotas);
+console.log($scope.rotas  );
 });
