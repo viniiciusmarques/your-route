@@ -1,15 +1,17 @@
-<ion-view>
-  <ion-nav-title>
-    <h1 class="title">Detalhes da rota</h1>
-  </ion-nav-title>
+<ion-view view-title="Detalhes da rota">
+  <ion-nav-bar class="bar bar-stable">
+      <ion-nav-back-button>Voltar</ion-nav-back-button>
+</ion-nav-bar>
   <ion-content>
     <ul class="list">
       <li class="item">Partida: {{detalheRota.partida}}</li>
       <li class="item">Destino: {{detalheRota.destino}}</li>
-      <li class="item">Data de Partida: {{detalheRota.DataPartida}}</li>
-      <li class="item">Data de Entrega: {{detalheRota.DataEntrega}}</li>
+      <li class="item">Data de Partida: {{detalheRota.datapartida | date: 'dd/MM/yyyy'}}</li>
+      <li class="item">Data de Entrega: {{detalheRota.dataentrega | date: 'dd/MM/yyyy'}}</li>
     </ul>
     <hr>
-    <button type="button" name="button" >teste</button>
+    <button type="button" class="button button-positive button-block" ng-if="detalheRota.chave == false" ng-click="localRota(detalheRota)"> + MINHAS ROTAS</button>
+    <button type="button" class="button button-assertive button-block" ng-if="detalheRota.chave == true" ng-click="removeLocalRota(detalheRota)"> REMOVER </button>
+    <button type="button" class="button button-balanced button-block" ng-if="detalheRota.chave == true" ng-click="visualizarRota(detalheRota)"> INICIAR ROTA </button>
   </ion-content>
 </ion-view>

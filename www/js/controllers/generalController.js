@@ -1,4 +1,4 @@
-angular.module('starter').controller('generalController',function($scope, $state, $cordovaGeolocation, $http, $rootScope){
+angular.module('starter').controller('generalController',function($scope, $state, $cordovaGeolocation, $http, $rootScope, HttpService){
 
   var options = {timeout: 10000, enableHighAccuracy: true};
 
@@ -31,6 +31,18 @@ angular.module('starter').controller('generalController',function($scope, $state
      'DataPartida','DataEntrega', 'Distancia', 'destino', 'partida'
    ];
 
+  $scope.buscaRotas = function (){
+    HttpService.getRotas()
+      .then(function(rotas){
+        $scope.bancoRotas = rotas;
+      });
+  }
+
+  $scope.buscaRotasLocal = function (){
+    $scope.localRotas =  HttpService.getRotasLocal();
+    $scope.$broadcast('scroll.refreshComplete');
+  }
+
 $scope.visualizarRota = function($rota){
 
   $state.go('menu.route');
@@ -38,7 +50,7 @@ $scope.visualizarRota = function($rota){
   //Instanciar o DistanceMatrixService
   var service = new google.maps.DistanceMatrixService();
   //executar o DistanceMatrixService
-  service.getDistanceMatrix(
+    service.getDistanceMatrix(
     {
         //Origem
         origins: [$rota.partida],
@@ -54,12 +66,52 @@ $scope.visualizarRota = function($rota){
     function callback(response, status) {
         if (status == google.maps.DistanceMatrixStatus.OK)
             $("#map").attr("src", "https://maps.google.com/maps?saddr=" + response.originAddresses + "&daddr=" + response.destinationAddresses + "&output=embed");
-        }
-}
+        };
+
+
+};
+
+ $scope.localRota = function($rota){
+   HttpService.localRota($rota);
+   swal("Salvo!", "Rota sincronizada com sucesso.", "success");
+   $state.go('menu.listRoute');
+ }
 
  $scope.verificaRota = function($rota) {
-   $state.go('menu.detalheRota');
-   $scope.detalheRota = $rota;
- }
-console.log($scope.rotas  );
+   let rotasLocal = HttpService.getRotasLocal();
+   let qtd = Object.keys(rotasLocal).length;
+
+    if(rotasLocal == false){
+      $rota['chave'] = false;
+    }else{
+      for(var i = 0; i <= qtd - 1; i++){
+        if($rota.id_rota == rotasLocal[i].id_rota){
+          $rota['chave'] = true;
+          break;
+        }else{
+          $rota['chave'] = false;
+        }
+      };
+    }
+    $rootScope.detalheRota = $rota;
+    $state.go('menu.detalheRota');
+ };
+
+ $scope.removeLocalRota = function($rota){
+  swal({
+    title: "Têm certeza que deseja remover essa rota da sua lista?",
+    text: "Essa ação não podera ser revertida",
+    type: "warning",
+    showCancelButton: true,
+    cancelButtonText:"Cancelar",
+    confirmButtonColor: "blue",
+    confirmButtonText: "Sim, tenho certeza",
+    closeOnConfirm: false
+    },
+    function(){
+      var retorno = HttpService.removeLocalRota($rota);
+      if(retorno == true)
+        swal("Removido!", "Sua rota acaba de ser excluida com sucesso.", "success");
+      });
+    };
 });
