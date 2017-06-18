@@ -1,13 +1,17 @@
-<ion-view ng-init="buscaRotas()" view-title="Rotas">
+<ion-view view-title="Rotas">
   <ion-content>
+    <ion-refresher
+  pulling-text="Recarregar..."
+  on-refresh="buscaRotasLocal()">
+</ion-refresher>
     <button  class="button button-block button-positive" cancel-search-button="Limpar" search-placeholder="Pesquisar" cancel-button="Cancelar" reset-button="Limpar" modal-select="" ng-model="filtro" options="filtros" has-search="true" modal-title="Selecione o Filtro">
       ORDENAR POR: {{filtro}}
       <div class="option">
         {{option}}
       </div>
     </button>
-    <ion-list>
-      <ion-item ng-repeat="rota in bancoRotas |  orderBy: filtro" can-swipe="swipe">
+    <ion-list ng-init="buscaRotasLocal()">
+      <ion-item ng-repeat="rota in localRotas " can-swipe="swipe">
         <ul style="list-style-type:none">
           <li>Partida: {{rota.partida}}</li>
           <li>Destino: {{rota.destino}}</li>

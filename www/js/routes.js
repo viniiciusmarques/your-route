@@ -60,12 +60,22 @@ angular.module('starter')
 
   .state('menu.detalheRota',{
     url:'/detalheRota',
-     views:{
-       'Conteudo': {
+    views:{
+      'Conteudo':{
         templateUrl:'templates/detalheRota.html',
         controller:'generalController'
-       }
-     }
+      }
+    }
+  })
+
+  .state('menu.myRoutes',{
+    url:'/myRoutes',
+    views:{
+      'Conteudo':{
+        templateUrl:'templates/myRoute.html',
+        controller:'generalController'
+      }
+    }
   })
 
   $urlRouterProvider.otherwise('/login');
