@@ -36,5 +36,12 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 #map {
     width: 100%;
-    height: 100%;
+    height: 90%;
+}
+
+.bordo{
+  ion-item{
+    width: 50%;
+    height: 135px;
+  }
 }
