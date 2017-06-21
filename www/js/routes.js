@@ -78,6 +78,98 @@ angular.module('starter')
     }
   })
 
+
+  .state('menu.ocorrencias',{
+    url:'/ocorrencias',
+    views:{
+      'Conteudo':{
+        templateUrl:'templates/ocorrencias.html',
+        controller:'generalController'
+      }
+    }
+  })
+
+//ocorrencias
+  .state('menu.tempoRotas',{
+    url:'/tempoRotas',
+    views:{
+      'Conteudo':{
+        templateUrl:'templates/ocorrencias/tempoRotas.html'//,
+        //controller:''
+      }
+    }
+  })
+
+  .state('menu.cargaDescarga',{
+    url:'/cargaDescarga',
+    views:{
+      'Conteudo':{
+        templateUrl:'templates/ocorrencias/cargaDescarga.html'//,
+        //controller:''
+      }
+    }
+  })
+
+  .state('menu.alimentacao',{
+    url:'/alimentacao',
+    views:{
+      'Conteudo':{
+        templateUrl:'templates/ocorrencias/alimentacao.html'//,
+        //controller:''
+      }
+    }
+  })
+
+  .state('menu.descansoPernoite',{
+    url:'/descansoPernoite',
+    views:{
+      'Conteudo':{
+        templateUrl:'templates/ocorrencias/descansoPernoite.html'//,
+        //controller:''
+      }
+    }
+  })
+
+  .state('menu.manutencao',{
+    url:'/manutencao',
+    views:{
+      'Conteudo':{
+        templateUrl:'templates/ocorrencias/manutencao.html'//,
+        //controller:''
+      }
+    }
+  })
+
+  .state('menu.abastecimento',{
+    url:'/abastecimento',
+    views:{
+      'Conteudo':{
+        templateUrl:'templates/ocorrencias/abastecimento.html'//,
+        //controller:''
+      }
+    }
+  })
+
+  .state('menu.fiscalizacao',{
+    url:'/fiscalizacao',
+    views:{
+      'Conteudo':{
+        templateUrl:'templates/ocorrencias/fiscalizacao.html'//,
+        //controller:''
+      }
+    }
+  })
+
+  .state('menu.cliente',{
+    url:'/cliente',
+    views:{
+      'Conteudo':{
+        templateUrl:'templates/ocorrencias/cliente.html'//,
+        //controller:''
+      }
+    }
+  })
+
   $urlRouterProvider.otherwise('/login');
 });
 
