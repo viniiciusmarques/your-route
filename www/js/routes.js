@@ -170,16 +170,86 @@ angular.module('starter')
     }
   })
 
+//cadastros
+.state('menu.cadTempoRota',{
+  url:'/cadTempoRota',
+  views:{
+    'Conteudo':{
+      templateUrl:'templates/ocorrencias/registro/tempoRotas.html'//,
+      //controller:''
+    }
+  }
+})
+
+.state('menu.cadCargaDescarga',{
+  url:'/cadCargaDescarga',
+  views:{
+    'Conteudo':{
+      templateUrl:'templates/ocorrencias/registro/cargaDescarga.html'//,
+      //controller:''
+    }
+  }
+})
+
+.state('menu.cadAlimentacao',{
+  url:'/cadAlimentacao',
+  views:{
+    'Conteudo':{
+      templateUrl:'templates/ocorrencias/registro/alimentacao.html'//,
+      //controller:''
+    }
+  }
+})
+
+.state('menu.cadDescansoPernoite',{
+  url:'/cadDescansoPernoite',
+  views:{
+    'Conteudo':{
+      templateUrl:'templates/ocorrencias/registro/descansoPernoite.html'//,
+      //controller:''
+    }
+  }
+})
+
+.state('menu.cadManutencao',{
+  url:'/cadManutencao',
+  views:{
+    'Conteudo':{
+      templateUrl:'templates/ocorrencias/registro/manutencao.html'//,
+      //controller:''
+    }
+  }
+})
+
+.state('menu.cadAbastecimento',{
+  url:'/cadAbastecimento',
+  views:{
+    'Conteudo':{
+      templateUrl:'templates/ocorrencias/registro/abastecimento.html'//,
+      //controller:''
+    }
+  }
+})
+
+.state('menu.cadFiscalizacao',{
+  url:'/cadFiscalizacao',
+  views:{
+    'Conteudo':{
+      templateUrl:'templates/ocorrencias/registro/fiscalizacao.html'//,
+      //controller:''
+    }
+  }
+})
+
+.state('menu.cadCliente',{
+  url:'/cadCliente',
+  views:{
+    'Conteudo':{
+      templateUrl:'templates/ocorrencias/registro/cliente.html'//,
+      //controller:''
+    }
+  }
+})
+
   $urlRouterProvider.otherwise('/login');
 });
-
-
-/* Exemplo de rota Basica
-    .state('NOMEROTA',{
-      url:'/NOMEURL',
-      views:{ (colocar 'view' caso depender do menu)
-        templateUrl: 'CAMINHO DO TEMPLATE'
-        controller: 'NOME CONTROLLER'
-      }
-    })
-*/
