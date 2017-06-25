@@ -19,6 +19,9 @@
 					<div class="col">
 						Local
 					</div>
+					<div class="col">
+
+					</div>
 				</div>
 
 				<div class="row" ng-repeat="tempo in info">
@@ -33,6 +36,9 @@
 					</div>
 					<div class="col">
 						{{tempo.local}}
+					</div>
+					<div class="col">
+							<button class="button icon ion-trash-a" ng-click="deleteTempoRota(tempo)"></button>
 					</div>
 				</div>
 			</div>
