@@ -9820,12 +9820,12 @@ a.button {
   width: 100%;
   background-position-x: -457px;
   background-size: cover; }
-  .login img {
+  .login .logo p {
+    font-size: 0px; }
+  .login .logo img {
     width: 150%;
     left: -23%;
     position: absolute; }
-  .login .logo p {
-    font-size: 0px; }
   .login .list-inset {
     width: 75%;
     left: 9%;
@@ -9838,7 +9838,7 @@ a.button {
       font-size: 16px; }
     .login .login i {
       font-size: 20px; }
-    @media (max-width: 415px) {
+    @media (max-width: 360px) {
       .login .login {
         margin-top: 75%; } }
     @media (max-height: 565px) {
@@ -9876,6 +9876,57 @@ a.button {
 .cadastro {
   background: url("../img/cadastro.png") no-repeat;
   width: 100%; }
+  .cadastro .logo p {
+    font-size: 0px; }
+  .cadastro .logo img {
+    width: 150%;
+    left: -23%;
+    position: absolute; }
+  .cadastro .list-inset {
+    width: 75%;
+    left: 9%;
+    opacity: 0.9; }
+  .cadastro .item-input {
+    border-radius: 5px !important;
+    border-color: transparent; }
+    .cadastro .item-input input {
+      text-align: center;
+      font-size: 16px; }
+    .cadastro .item-input i {
+      font-size: 20px;
+      padding-right: 0; }
+  .cadastro .cpf {
+    margin-top: 77%; }
+    @media (max-width: 360px) {
+      .cadastro .cpf {
+        margin-top: 70%; } }
+    @media (max-height: 565px) {
+      .cadastro .cpf {
+        margin-top: 50%; } }
+    @media (min-width: 680px) {
+      .cadastro .cpf {
+        margin-top: 60%; } }
+  .cadastro .row {
+    display: block;
+    text-align: center; }
+    @media (min-width: 680px) {
+      .cadastro .row {
+        margin-top: 180px; } }
+  .cadastro .btn-cadastrar {
+    width: 50%;
+    border-color: transparent;
+    background-color: #96F978;
+    color: #fff; }
+    .cadastro .btn-cadastrar:hover {
+      color: #fff; }
+  .cadastro .btn-voltar {
+    width: 50%;
+    margin-top: 15px;
+    border-color: transparent;
+    background-color: #F9E878;
+    color: #fff; }
+    .cadastro .btn-voltar:hover {
+      color: #fff; }
 
 .scroll {
   height: 100%; }
