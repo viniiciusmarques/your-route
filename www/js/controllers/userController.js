@@ -21,7 +21,7 @@ angular.module('starter').controller('userController', function($scope,$state){
 
   $scope.cadastrar = function(){
     /* cadastro de usuario */
-    swal("Bom Trabalho!", "Você já está cadastrado!", "success");
+    swal("Cadastro realizado com sucesso!", "Obrigado por se cadastrar no nosso sistema! Para usufruir de nosso aplicativo é necessário que seus dados sejam validados, assim que este processo for feito você receberá um email informando os dados para acesso.", "success");
     $state.go('login');
   }
 });
