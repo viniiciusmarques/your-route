@@ -1,13 +1,37 @@
-<ion-view view-title="Diario de Bordo">
+<ion-view view-title="Diario de Bordo" ng-init="getAlimentacao()">
 	<ion-content>
 		<div class="list">
 		  <div class="item item-divider" >
 				<span class="icon ion-coffee"></span>
  				Alimentação
 		  </div>
-		  <!-- criar div com class item -->
+			<div class="item">
+				<div class="row">
+					<div class="col">
+						Data
+					</div>
+					<div class="col">
+						Hora
+					</div>
+					<div class="col">
+						Valor
+					</div>
+				</div>
+
+				<div class="row" ng-repeat="alimentacao in info">
+					<div class="col">
+						{{alimentacao.date | date: 'dd/MM/yyyy'}}
+					</div>
+					<div class="col">
+						{{alimentacao.hora | date: 'HH:mm'}}
+					</div>
+					<div class="col">
+						{{alimentacao.valor}}
+					</div>
+				</div>
+			</div>
 	</div>
-		<button class="button button-block button-balanced" ui-sref="menu.ocorrencias"> Inserir Novo Registro </button>
+		<button class="button button-block button-balanced" ui-sref="menu.cadAlimentacao"> Inserir Novo Registro </button>
     <button class="button button-block button-energized" ui-sref="menu.ocorrencias"> Voltar </button>
 	</ion-content>
 </ion-view>
