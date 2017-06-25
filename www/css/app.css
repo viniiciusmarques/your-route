@@ -9935,6 +9935,15 @@ a.button {
   background-color: #F9E878 !important;
   color: #000 !important; }
 
+.sidebar .user img {
+  width: 40%; }
+
+.sidebar .user p {
+  margin-top: 25px;
+  margin-left: 45%; }
+  .sidebar .user p strong {
+    font-size: 20px; }
+
 .scroll {
   height: 100%; }
 
