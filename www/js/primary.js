@@ -119,8 +119,8 @@ angular.module('starter')
     url:'/tempoRotas',
     views:{
       'Conteudo':{
-        templateUrl:'templates/ocorrencias/tempoRotas.html'//,
-        //controller:''
+        templateUrl:'templates/ocorrencias/tempoRotas.html',
+        controller:'ocorrenciasController'
       }
     }
   })
@@ -129,8 +129,8 @@ angular.module('starter')
     url:'/cargaDescarga',
     views:{
       'Conteudo':{
-        templateUrl:'templates/ocorrencias/cargaDescarga.html'//,
-        //controller:''
+        templateUrl:'templates/ocorrencias/cargaDescarga.html',
+        controller:'ocorrenciasController'
       }
     }
   })
@@ -139,8 +139,8 @@ angular.module('starter')
     url:'/alimentacao',
     views:{
       'Conteudo':{
-        templateUrl:'templates/ocorrencias/alimentacao.html'//,
-        //controller:''
+        templateUrl:'templates/ocorrencias/alimentacao.html',
+        controller:'ocorrenciasController'
       }
     }
   })
@@ -149,8 +149,8 @@ angular.module('starter')
     url:'/descansoPernoite',
     views:{
       'Conteudo':{
-        templateUrl:'templates/ocorrencias/descansoPernoite.html'//,
-        //controller:''
+        templateUrl:'templates/ocorrencias/descansoPernoite.html',
+        controller:'ocorrenciasController'
       }
     }
   })
@@ -159,8 +159,8 @@ angular.module('starter')
     url:'/manutencao',
     views:{
       'Conteudo':{
-        templateUrl:'templates/ocorrencias/manutencao.html'//,
-        //controller:''
+        templateUrl:'templates/ocorrencias/manutencao.html',
+        controller:'ocorrenciasController'
       }
     }
   })
@@ -169,8 +169,8 @@ angular.module('starter')
     url:'/abastecimento',
     views:{
       'Conteudo':{
-        templateUrl:'templates/ocorrencias/abastecimento.html'//,
-        //controller:''
+        templateUrl:'templates/ocorrencias/abastecimento.html',
+        controller:'ocorrenciasController'
       }
     }
   })
@@ -179,8 +179,8 @@ angular.module('starter')
     url:'/fiscalizacao',
     views:{
       'Conteudo':{
-        templateUrl:'templates/ocorrencias/fiscalizacao.html'//,
-        //controller:''
+        templateUrl:'templates/ocorrencias/fiscalizacao.html',
+        controller:'ocorrenciasController'
       }
     }
   })
@@ -189,8 +189,8 @@ angular.module('starter')
     url:'/cliente',
     views:{
       'Conteudo':{
-        templateUrl:'templates/ocorrencias/cliente.html'//,
-        //controller:''
+        templateUrl:'templates/ocorrencias/cliente.html',
+        controller:'ocorrenciasController'
       }
     }
   })
@@ -200,8 +200,8 @@ angular.module('starter')
   url:'/cadTempoRota',
   views:{
     'Conteudo':{
-      templateUrl:'templates/ocorrencias/registro/tempoRotas.html'//,
-      //controller:''
+      templateUrl:'templates/ocorrencias/registro/tempoRotas.html',
+      controller:'ocorrenciasController'
     }
   }
 })
@@ -210,8 +210,8 @@ angular.module('starter')
   url:'/cadCargaDescarga',
   views:{
     'Conteudo':{
-      templateUrl:'templates/ocorrencias/registro/cargaDescarga.html'//,
-      //controller:''
+      templateUrl:'templates/ocorrencias/registro/cargaDescarga.html',
+      controller:'ocorrenciasController'
     }
   }
 })
@@ -220,8 +220,8 @@ angular.module('starter')
   url:'/cadAlimentacao',
   views:{
     'Conteudo':{
-      templateUrl:'templates/ocorrencias/registro/alimentacao.html'//,
-      //controller:''
+      templateUrl:'templates/ocorrencias/registro/alimentacao.html',
+      controller:'ocorrenciasController'
     }
   }
 })
@@ -230,8 +230,8 @@ angular.module('starter')
   url:'/cadDescansoPernoite',
   views:{
     'Conteudo':{
-      templateUrl:'templates/ocorrencias/registro/descansoPernoite.html'//,
-      //controller:''
+      templateUrl:'templates/ocorrencias/registro/descansoPernoite.html',
+      controller:'ocorrenciasController'
     }
   }
 })
@@ -240,8 +240,8 @@ angular.module('starter')
   url:'/cadManutencao',
   views:{
     'Conteudo':{
-      templateUrl:'templates/ocorrencias/registro/manutencao.html'//,
-      //controller:''
+      templateUrl:'templates/ocorrencias/registro/manutencao.html',
+      controller:'ocorrenciasController'
     }
   }
 })
@@ -250,8 +250,8 @@ angular.module('starter')
   url:'/cadAbastecimento',
   views:{
     'Conteudo':{
-      templateUrl:'templates/ocorrencias/registro/abastecimento.html'//,
-      //controller:''
+      templateUrl:'templates/ocorrencias/registro/abastecimento.html',
+      controller:'ocorrenciasController'
     }
   }
 })
@@ -260,8 +260,8 @@ angular.module('starter')
   url:'/cadFiscalizacao',
   views:{
     'Conteudo':{
-      templateUrl:'templates/ocorrencias/registro/fiscalizacao.html'//,
-      //controller:''
+      templateUrl:'templates/ocorrencias/registro/fiscalizacao.html',
+      controller:'ocorrenciasController'
     }
   }
 })
@@ -270,8 +270,8 @@ angular.module('starter')
   url:'/cadCliente',
   views:{
     'Conteudo':{
-      templateUrl:'templates/ocorrencias/registro/cliente.html'//,
-      //controller:''
+      templateUrl:'templates/ocorrencias/registro/cliente.html',
+      controller:'ocorrenciasController'
     }
   }
 })
@@ -435,6 +435,126 @@ $scope.visualizarRota = function($rota){
         swal("Removido!", "Sua rota acaba de ser excluida com sucesso.", "success");
       });
     };
+});
+
+angular.module('starter').controller('ocorrenciasController',   function($scope,ocorrenciasService,$state,$rootScope){
+const id = $rootScope.detalheRota.id_rota;
+
+$scope.tempo = {id_rota:id};
+$scope.info = {id_rota:id};
+
+  var sweetAlert = function(retorno){
+    if(retorno == true){
+      swal("Bom Trabalho!", "Ocorrencia cadastrada com sucesso!", "success");
+    }
+  };
+
+  var verifica = function(info){
+    for(var i=0; i <= info.length - 1; i++){
+      if(id != info[i].id_rota){
+        info = info.splice(1,[i]);
+      }
+    }
+    return info;
+  }
+
+  $scope.inicioFimLocal = function(){
+      let retorno = ocorrenciasService.Tempo($scope.tempo);
+      sweetAlert(retorno);
+      $state.go('menu.tempoRotas');
+  };
+
+  $scope.getTempoRotas = function(){
+    var info = ocorrenciasService.getTempoRotas();
+    info = verifica(info);
+    $scope.info = info;
+  }
+
+  $scope.cargaDescarga = function(){
+    let retorno = ocorrenciasService.cargaDescarga($scope.info);
+    sweetAlert(retorno);
+    $state.go('menu.cargaDescarga');
+  };
+
+  $scope.getCargaDescarga = function(){
+    var info = ocorrenciasService.getCargaDescarga();
+    info = verifica(info);
+    $scope.info = info;
+  }
+
+  $scope.alimentacao = function(){
+    let retorno = ocorrenciasService.alimentacao($scope.info);
+    sweetAlert(retorno);
+    $state.go('menu.alimentacao');
+  }
+
+  $scope.getAlimentacao = function(){
+    var info = ocorrenciasService.getAlimentacao();
+    info = verifica(info);
+    $scope.info = info;
+  }
+
+  $scope.descansoPernoite = function(){
+    let retorno = ocorrenciasService.descansoPernoite($scope.info);
+    sweetAlert(retorno);
+    $state.go('menu.descansoPernoite');
+  }
+
+  $scope.getDescansoPernoite = function(){
+    var info = ocorrenciasService.getDescansoPernoite();
+    info = verifica(info);
+    $scope.info = info;
+  }
+
+  $scope.manutencao = function(){
+    let retorno = ocorrenciasService.manutencao($scope.info);
+    sweetAlert(retorno);
+    $state.go('menu.manutencao');
+  }
+
+  $scope.getManutencao = function(){
+    var info = ocorrenciasService.getManutencao();
+    info = verifica(info);
+    $scope.info = info;
+  }
+
+  $scope.abastecimento = function(){
+    let retorno = ocorrenciasService.abastecimento($scope.info);
+    sweetAlert(retorno);
+    $state.go('menu.abastecimento');
+  }
+
+  $scope.getAbastecimento = function(){
+    var info = ocorrenciasService.getAbastecimento();
+    info = verifica(info);
+    $scope.info = info;
+  }
+
+
+  $scope.fiscalizacao = function(){
+    let retorno = ocorrenciasService.fiscalizacao($scope.info);
+    sweetAlert(retorno);
+    $state.go('menu.fiscalizacao');
+  }
+
+  $scope.getFiscalizacao = function(){
+    var info = ocorrenciasService.getFiscalizacao();
+    info = verifica(info);
+    $scope.info = info;
+  }
+
+  $scope.cliente = function(){
+    let retorno = ocorrenciasService.cliente($scope.info);
+    sweetAlert(retorno);
+    $state.go('menu.cliente');
+  }
+
+  $scope.getCliente = function(){
+    var info = ocorrenciasService.getCliente();
+    info = verifica(info);
+    $scope.info = info;
+  }
+
 });
 
 angular.module('starter').controller('userController', function($scope,$state){

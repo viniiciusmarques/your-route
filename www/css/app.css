@@ -9817,7 +9817,13 @@ a.button {
 
 .login {
   background: url("../img/login.jpg") no-repeat;
-  width: 100%; }
+  width: 100%;
+  background-position-x: -457px;
+  background-size: cover; }
+  .login img {
+    width: 150%;
+    left: -23%;
+    position: absolute; }
   .login .logo p {
     font-size: 0px; }
   .login .list-inset {
@@ -9825,17 +9831,33 @@ a.button {
     left: 9%;
     opacity: 0.9; }
   .login .login {
-    margin-top: 150px;
+    margin-top: 85%;
     border-radius: 5px; }
     .login .login input {
       text-align: center;
       font-size: 16px; }
+    .login .login i {
+      font-size: 20px; }
+    @media (max-width: 415px) {
+      .login .login {
+        margin-top: 75%; } }
+    @media (max-height: 565px) {
+      .login .login {
+        margin-top: 55%; } }
+    @media (min-width: 680px) {
+      .login .login {
+        margin-top: 65%; } }
   .login .password input {
     text-align: center;
     font-size: 16px; }
+  .login .password i {
+    font-size: 20px; }
   .login .row {
     display: block;
     text-align: center; }
+    @media (min-width: 680px) {
+      .login .row {
+        margin-top: 180px; } }
   .login .btn-login {
     width: 50%;
     border-color: transparent;
@@ -9851,8 +9873,8 @@ a.button {
     font-size: 16px;
     text-decoration: none; }
 
-.backCad {
-  background: url("../img/login.jpg") no-repeat;
+.cadastro {
+  background: url("../img/cadastro.png") no-repeat;
   width: 100%; }
 
 .scroll {
