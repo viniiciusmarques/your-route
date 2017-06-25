@@ -9847,6 +9847,8 @@ a.button {
   border-color: transparent;
   background-color: #96F978;
   color: #fff; }
+  .btn-login:hover {
+    color: #fff; }
 
 .btn-cadastro {
   display: block;
