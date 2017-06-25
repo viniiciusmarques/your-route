@@ -1,16 +1,43 @@
-<ion-view view-title="Diario de Bordo">
+<ion-view view-title="Diario de Bordo" ng-init="getTempoRotas()">
 	<ion-content>
 		<div class="list">
-		  <div class="item item-divider" >
+		  <div class="item item-divider">
 				<span class="icon ion-clock"></span>
  				Tempo Rota
 		  </div>
-		  <!-- criar div com class item -->
 			<div class="item">
+				<div class="row">
+					<div class="col">
+						Data
+					</div>
+					<div class="col">
+						Hora
+					</div>
+					<div class="col">
+						Inicio | Fim
+					</div>
+					<div class="col">
+						Local
+					</div>
+				</div>
 
+				<div class="row" ng-repeat="tempo in info">
+					<div class="col">
+						{{tempo.date | date: 'dd/MM/yyyy'}}
+					</div>
+					<div class="col">
+						{{tempo.hora | date: 'HH:mm'}}
+					</div>
+					<div class="col">
+						{{tempo.status}}
+					</div>
+					<div class="col">
+						{{tempo.local}}
+					</div>
+				</div>
 			</div>
 	</div>
-		<button class="button button-block button-balanced" ui-sref="menu.ocorrencias"> Inserir Novo Registro </button>
+		<button class="button button-block button-balanced" ui-sref="menu.cadTempoRota"> Inserir Novo Registro </button>
     <button class="button button-block button-energized" ui-sref="menu.ocorrencias"> Voltar </button>
 	</ion-content>
 </ion-view>

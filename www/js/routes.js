@@ -94,8 +94,8 @@ angular.module('starter')
     url:'/tempoRotas',
     views:{
       'Conteudo':{
-        templateUrl:'templates/ocorrencias/tempoRotas.html'//,
-        //controller:''
+        templateUrl:'templates/ocorrencias/tempoRotas.html',
+        controller:'ocorrenciasController'
       }
     }
   })
@@ -104,8 +104,8 @@ angular.module('starter')
     url:'/cargaDescarga',
     views:{
       'Conteudo':{
-        templateUrl:'templates/ocorrencias/cargaDescarga.html'//,
-        //controller:''
+        templateUrl:'templates/ocorrencias/cargaDescarga.html',
+        controller:'ocorrenciasController'
       }
     }
   })
@@ -114,8 +114,8 @@ angular.module('starter')
     url:'/alimentacao',
     views:{
       'Conteudo':{
-        templateUrl:'templates/ocorrencias/alimentacao.html'//,
-        //controller:''
+        templateUrl:'templates/ocorrencias/alimentacao.html',
+        controller:'ocorrenciasController'
       }
     }
   })
@@ -124,8 +124,8 @@ angular.module('starter')
     url:'/descansoPernoite',
     views:{
       'Conteudo':{
-        templateUrl:'templates/ocorrencias/descansoPernoite.html'//,
-        //controller:''
+        templateUrl:'templates/ocorrencias/descansoPernoite.html',
+        controller:'ocorrenciasController'
       }
     }
   })
@@ -134,8 +134,8 @@ angular.module('starter')
     url:'/manutencao',
     views:{
       'Conteudo':{
-        templateUrl:'templates/ocorrencias/manutencao.html'//,
-        //controller:''
+        templateUrl:'templates/ocorrencias/manutencao.html',
+        controller:'ocorrenciasController'
       }
     }
   })
@@ -144,8 +144,8 @@ angular.module('starter')
     url:'/abastecimento',
     views:{
       'Conteudo':{
-        templateUrl:'templates/ocorrencias/abastecimento.html'//,
-        //controller:''
+        templateUrl:'templates/ocorrencias/abastecimento.html',
+        controller:'ocorrenciasController'
       }
     }
   })
@@ -154,8 +154,8 @@ angular.module('starter')
     url:'/fiscalizacao',
     views:{
       'Conteudo':{
-        templateUrl:'templates/ocorrencias/fiscalizacao.html'//,
-        //controller:''
+        templateUrl:'templates/ocorrencias/fiscalizacao.html',
+        controller:'ocorrenciasController'
       }
     }
   })
@@ -164,8 +164,8 @@ angular.module('starter')
     url:'/cliente',
     views:{
       'Conteudo':{
-        templateUrl:'templates/ocorrencias/cliente.html'//,
-        //controller:''
+        templateUrl:'templates/ocorrencias/cliente.html',
+        controller:'ocorrenciasController'
       }
     }
   })
@@ -175,8 +175,8 @@ angular.module('starter')
   url:'/cadTempoRota',
   views:{
     'Conteudo':{
-      templateUrl:'templates/ocorrencias/registro/tempoRotas.html'//,
-      //controller:''
+      templateUrl:'templates/ocorrencias/registro/tempoRotas.html',
+      controller:'ocorrenciasController'
     }
   }
 })
@@ -185,8 +185,8 @@ angular.module('starter')
   url:'/cadCargaDescarga',
   views:{
     'Conteudo':{
-      templateUrl:'templates/ocorrencias/registro/cargaDescarga.html'//,
-      //controller:''
+      templateUrl:'templates/ocorrencias/registro/cargaDescarga.html',
+      controller:'ocorrenciasController'
     }
   }
 })
@@ -195,8 +195,8 @@ angular.module('starter')
   url:'/cadAlimentacao',
   views:{
     'Conteudo':{
-      templateUrl:'templates/ocorrencias/registro/alimentacao.html'//,
-      //controller:''
+      templateUrl:'templates/ocorrencias/registro/alimentacao.html',
+      controller:'ocorrenciasController'
     }
   }
 })
@@ -205,8 +205,8 @@ angular.module('starter')
   url:'/cadDescansoPernoite',
   views:{
     'Conteudo':{
-      templateUrl:'templates/ocorrencias/registro/descansoPernoite.html'//,
-      //controller:''
+      templateUrl:'templates/ocorrencias/registro/descansoPernoite.html',
+      controller:'ocorrenciasController'
     }
   }
 })
@@ -215,8 +215,8 @@ angular.module('starter')
   url:'/cadManutencao',
   views:{
     'Conteudo':{
-      templateUrl:'templates/ocorrencias/registro/manutencao.html'//,
-      //controller:''
+      templateUrl:'templates/ocorrencias/registro/manutencao.html',
+      controller:'ocorrenciasController'
     }
   }
 })
@@ -225,8 +225,8 @@ angular.module('starter')
   url:'/cadAbastecimento',
   views:{
     'Conteudo':{
-      templateUrl:'templates/ocorrencias/registro/abastecimento.html'//,
-      //controller:''
+      templateUrl:'templates/ocorrencias/registro/abastecimento.html',
+      controller:'ocorrenciasController'
     }
   }
 })
@@ -235,8 +235,8 @@ angular.module('starter')
   url:'/cadFiscalizacao',
   views:{
     'Conteudo':{
-      templateUrl:'templates/ocorrencias/registro/fiscalizacao.html'//,
-      //controller:''
+      templateUrl:'templates/ocorrencias/registro/fiscalizacao.html',
+      controller:'ocorrenciasController'
     }
   }
 })
@@ -245,8 +245,8 @@ angular.module('starter')
   url:'/cadCliente',
   views:{
     'Conteudo':{
-      templateUrl:'templates/ocorrencias/registro/cliente.html'//,
-      //controller:''
+      templateUrl:'templates/ocorrencias/registro/cliente.html',
+      controller:'ocorrenciasController'
     }
   }
 })
