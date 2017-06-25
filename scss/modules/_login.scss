@@ -1,57 +1,57 @@
-.backLogin {
+.login {
 	background: url('../img/login.jpg') no-repeat;
 	width: 100%;
-}
 
-.logo {
-	p {
-		font-size: 0px;
+	.logo {
+		p {
+			font-size: 0px;
+		}
 	}
-}
 
-.list-inset {
-	width: 75%;
-	left: 9%;
-	opacity: 0.9;
-}
+	.list-inset {
+		width: 75%;
+		left: 9%;
+		opacity: 0.9;
+	}
 
-.login {
-	margin-top: 150px;
-	border-radius: 5px;
+	.login {
+		margin-top: 150px;
+		border-radius: 5px;
 
-	input {
+		input {
+			text-align: center;
+			font-size: 16px;
+		}
+	}
+
+	.password {
+		input {
+			text-align: center;
+			font-size: 16px;
+		}
+	}
+
+	.row {
+		display: block;
 		text-align: center;
-		font-size: 16px;
 	}
-}
+	.btn-login {
+		width: 50%;
+		border-color: transparent;
+	    background-color: #96F978;
+	    color: #fff;
 
-.password {
-	input {
+	    &:hover {
+	    	color: #fff;
+	    }
+	}
+
+	.btn-cadastro {
+		display: block;
+		margin-top: 50px;
 		text-align: center;
+		color: #fff;
 		font-size: 16px;
+		text-decoration: none;
 	}
-}
-
-.row {
-	display: block;
-	text-align: center;
-}
-.btn-login {
-	width: 50%;
-	border-color: transparent;
-    background-color: #96F978;
-    color: #fff;
-
-    &:hover {
-    	color: #fff;
-    }
-}
-
-.btn-cadastro {
-	display: block;
-	margin-top: 50px;
-	text-align: center;
-	color: #fff;
-	font-size: 16px;
-	text-decoration: none;
 }
