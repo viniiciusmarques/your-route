@@ -9928,10 +9928,12 @@ a.button {
     .cadastro .btn-voltar:hover {
       color: #fff; }
 
-.showSweetAlert {
-  opacity: 0.9; }
-  .showSweetAlert p {
-    font-size: 12px !important; }
+.showSweetAlert p {
+  font-size: 12px !important; }
+
+.showSweetAlert .sa-confirm-button-container .confirm {
+  background-color: #F9E878 !important;
+  color: #000 !important; }
 
 .scroll {
   height: 100%; }

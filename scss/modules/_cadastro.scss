@@ -83,9 +83,14 @@
 }
 
 .showSweetAlert {
-	opacity: 0.9;
-	
 	p {
 		font-size: 12px !important;
+	}
+
+	.sa-confirm-button-container {
+		.confirm {
+			background-color: #F9E878 !important;
+			color: #000 !important;
+		}
 	}
 }
