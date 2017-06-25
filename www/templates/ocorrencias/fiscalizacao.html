@@ -16,6 +16,9 @@
 					<div class="col">
 						Fiscalização
 					</div>
+					<div class="col">
+
+					</div>
 				</div>
 
 				<div class="row" ng-repeat="fiscalizacao in info">
@@ -27,6 +30,9 @@
 					</div>
 					<div class="col">
 						{{fiscalizacao.tipo}}
+					</div>
+					<div class="col">
+							<button class="button icon ion-trash-a" ng-click="deleteFiscalizacao(fiscalizacao)"></button>
 					</div>
 				</div>
 			</div>

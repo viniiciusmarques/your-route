@@ -11,9 +11,11 @@ $scope.info = {id_rota:id};
   };
 
   var verifica = function(info){
-    for(var i=0; i <= info.length - 1; i++){
+    console.log(info);
+    var cont = info.length;
+    for(var i=0; i < info.length; i++){
       if(id != info[i].id_rota){
-        info = info.splice(1,[i]);
+        info.splice([i],1);
       }
     }
     return info;
@@ -31,6 +33,24 @@ $scope.info = {id_rota:id};
     $scope.info = info;
   }
 
+  $scope.deleteTempoRota = function(tempo){
+    swal({
+      title: "Têm certeza que deseja remover o registro?",
+      text: "Essa ação não podera ser revertida",
+      type: "warning",
+      showCancelButton: true,
+      cancelButtonText:"Cancelar",
+      confirmButtonColor: "blue",
+      confirmButtonText: "Sim, tenho certeza",
+      closeOnConfirm: false
+      },
+      function(){
+        var retorno = ocorrenciasService.deleteTempoRota(tempo);
+        if(retorno == true)
+          swal("Removido!", "Registro removido com sucesso.", "success");
+        });
+  };
+
   $scope.cargaDescarga = function(){
     let retorno = ocorrenciasService.cargaDescarga($scope.info);
     sweetAlert(retorno);
@@ -42,6 +62,24 @@ $scope.info = {id_rota:id};
     info = verifica(info);
     $scope.info = info;
   }
+
+  $scope.deleteCargaDescarga = function(info){
+    swal({
+      title: "Têm certeza que deseja remover o registro?",
+      text: "Essa ação não podera ser revertida",
+      type: "warning",
+      showCancelButton: true,
+      cancelButtonText:"Cancelar",
+      confirmButtonColor: "blue",
+      confirmButtonText: "Sim, tenho certeza",
+      closeOnConfirm: false
+      },
+      function(){
+        var retorno = ocorrenciasService.deleteCargaDescarga(info);
+        if(retorno == true)
+          swal("Removido!", "Registro removido com sucesso.", "success");
+        });
+  };
 
   $scope.alimentacao = function(){
     let retorno = ocorrenciasService.alimentacao($scope.info);
@@ -55,6 +93,24 @@ $scope.info = {id_rota:id};
     $scope.info = info;
   }
 
+  $scope.deleteAlimentacao = function(info){
+    swal({
+      title: "Têm certeza que deseja remover o registro?",
+      text: "Essa ação não podera ser revertida",
+      type: "warning",
+      showCancelButton: true,
+      cancelButtonText:"Cancelar",
+      confirmButtonColor: "blue",
+      confirmButtonText: "Sim, tenho certeza",
+      closeOnConfirm: false
+      },
+      function(){
+        var retorno = ocorrenciasService.deleteAlimentacao(info);
+        if(retorno == true)
+          swal("Removido!", "Registro removido com sucesso.", "success");
+        });
+  };
+
   $scope.descansoPernoite = function(){
     let retorno = ocorrenciasService.descansoPernoite($scope.info);
     sweetAlert(retorno);
@@ -66,6 +122,24 @@ $scope.info = {id_rota:id};
     info = verifica(info);
     $scope.info = info;
   }
+
+  $scope.deleteDescansoPernoite = function(info){
+    swal({
+      title: "Têm certeza que deseja remover o registro?",
+      text: "Essa ação não podera ser revertida",
+      type: "warning",
+      showCancelButton: true,
+      cancelButtonText:"Cancelar",
+      confirmButtonColor: "blue",
+      confirmButtonText: "Sim, tenho certeza",
+      closeOnConfirm: false
+      },
+      function(){
+        var retorno = ocorrenciasService.deleteDescansoPernoite(info);
+        if(retorno == true)
+          swal("Removido!", "Registro removido com sucesso.", "success");
+        });
+  };
 
   $scope.manutencao = function(){
     let retorno = ocorrenciasService.manutencao($scope.info);
@@ -79,6 +153,24 @@ $scope.info = {id_rota:id};
     $scope.info = info;
   }
 
+  $scope.deleteManutencao = function(info){
+    swal({
+      title: "Têm certeza que deseja remover o registro?",
+      text: "Essa ação não podera ser revertida",
+      type: "warning",
+      showCancelButton: true,
+      cancelButtonText:"Cancelar",
+      confirmButtonColor: "blue",
+      confirmButtonText: "Sim, tenho certeza",
+      closeOnConfirm: false
+      },
+      function(){
+        var retorno = ocorrenciasService.deleteManutencao(info);
+        if(retorno == true)
+          swal("Removido!", "Registro removido com sucesso.", "success");
+        });
+  };
+
   $scope.abastecimento = function(){
     let retorno = ocorrenciasService.abastecimento($scope.info);
     sweetAlert(retorno);
@@ -90,6 +182,24 @@ $scope.info = {id_rota:id};
     info = verifica(info);
     $scope.info = info;
   }
+
+  $scope.deleteAbastecimento = function(info){
+    swal({
+      title: "Têm certeza que deseja remover o registro?",
+      text: "Essa ação não podera ser revertida",
+      type: "warning",
+      showCancelButton: true,
+      cancelButtonText:"Cancelar",
+      confirmButtonColor: "blue",
+      confirmButtonText: "Sim, tenho certeza",
+      closeOnConfirm: false
+      },
+      function(){
+        var retorno = ocorrenciasService.deleteAbastecimento(info);
+        if(retorno == true)
+          swal("Removido!", "Registro removido com sucesso.", "success");
+        });
+  };
 
 
   $scope.fiscalizacao = function(){
@@ -104,6 +214,24 @@ $scope.info = {id_rota:id};
     $scope.info = info;
   }
 
+  $scope.deleteFiscalizacao = function(info){
+    swal({
+      title: "Têm certeza que deseja remover o registro?",
+      text: "Essa ação não podera ser revertida",
+      type: "warning",
+      showCancelButton: true,
+      cancelButtonText:"Cancelar",
+      confirmButtonColor: "blue",
+      confirmButtonText: "Sim, tenho certeza",
+      closeOnConfirm: false
+      },
+      function(){
+        var retorno = ocorrenciasService.deleteFiscalizacao(info);
+        if(retorno == true)
+          swal("Removido!", "Registro removido com sucesso.", "success");
+        });
+  };
+
   $scope.cliente = function(){
     let retorno = ocorrenciasService.cliente($scope.info);
     sweetAlert(retorno);
@@ -115,5 +243,23 @@ $scope.info = {id_rota:id};
     info = verifica(info);
     $scope.info = info;
   }
+
+  $scope.deleteCliente = function(info){
+    swal({
+      title: "Têm certeza que deseja remover o registro?",
+      text: "Essa ação não podera ser revertida",
+      type: "warning",
+      showCancelButton: true,
+      cancelButtonText:"Cancelar",
+      confirmButtonColor: "blue",
+      confirmButtonText: "Sim, tenho certeza",
+      closeOnConfirm: false
+      },
+      function(){
+        var retorno = ocorrenciasService.deleteCliente(info);
+        if(retorno == true)
+          swal("Removido!", "Registro removido com sucesso.", "success");
+        });
+  };
 
 });
