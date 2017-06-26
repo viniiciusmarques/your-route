@@ -1,12 +1,12 @@
-<ion-view view-title="Diario de Bordo">
+<ion-view class="reg-manutencao" view-title="Diario de Bordo">
 	<ion-content>
 		<div class="list">
-		  <div class="item item-divider" >
-				<span class="icon ion-settings"></span>
- 				Manutenção de Veiculos
-		  </div>
-			<div class="item">
-		  	<div class="list">
+			<div class="item item-divider manutencao-title" >
+				<img class="icon-routes" src="img/icons/tools.png">
+				<p>Manutenção de Veículos</p>
+			</div>
+			<div class="item manutencao-reg">
+				<div class="list">
 					<label class="item item-input item-stacked-label">
 						<span class="input-label">Data</span>
 						<input type="date" ng-model="info.date">
@@ -27,9 +27,11 @@
 						<input type="text" ng-model="info.tipo" placeholder="Informe o serviço realizado">
 					</label>
 				</div>
-		  </div>
+			</div>
 		</div>
-	<button class="button button-block button-assertive" ui-sref="menu.manutencao"> Cancelar </button>
-	<button class="button button-block button-default" ng-click="manutencao()"> Salvar </button>
+		<div class="btn-footer">
+			<button class="button button-block btn-cancelar" ui-sref="menu.manutencao"> Cancelar </button>
+			<button class="button button-block btn-salvar" ng-click="manutencao()"> Salvar </button>
+		</div>
 	</ion-content>
 </ion-view>

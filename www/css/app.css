@@ -10685,7 +10685,7 @@ a.button {
     margin-left: 9%;
     border-color: transparent;
     border-radius: 0;
-    background-color: #FFD95E;
+    background-color: #FF6060;
     color: #fff; }
     .reg-tempo .btn-footer .btn-cancelar:hover {
       color: #fff; }
@@ -10748,7 +10748,7 @@ a.button {
     margin-left: 9%;
     border-color: transparent;
     border-radius: 0;
-    background-color: #FFD95E;
+    background-color: #FF6060;
     color: #fff; }
     .reg-carga .btn-footer .btn-cancelar:hover {
       color: #fff; }
@@ -10811,9 +10811,135 @@ a.button {
     margin-left: 9%;
     border-color: transparent;
     border-radius: 0;
-    background-color: #FFD95E;
+    background-color: #FF6060;
     color: #fff; }
     .reg-alimentacao .btn-footer .btn-cancelar:hover {
+      color: #fff; }
+
+.reg-pernoite .list {
+  min-height: 560px; }
+  .reg-pernoite .list .pernoite-title {
+    background-color: #82BCD4; }
+    .reg-pernoite .list .pernoite-title .icon-routes {
+      width: 8%;
+      display: block;
+      float: left;
+      margin-left: 15px; }
+    .reg-pernoite .list .pernoite-title p {
+      text-align: center;
+      font-size: 24px;
+      color: #fff;
+      display: table-cell;
+      vertical-align: middle;
+      height: 40px;
+      width: 53%; }
+  .reg-pernoite .list .pernoite-reg {
+    margin: 0;
+    padding: 0; }
+    .reg-pernoite .list .pernoite-reg label {
+      margin: 0;
+      padding: 0; }
+      .reg-pernoite .list .pernoite-reg label span {
+        max-width: 100%;
+        width: 100%;
+        background-color: #DEDADA;
+        color: #757575;
+        text-align: center; }
+      .reg-pernoite .list .pernoite-reg label input {
+        max-width: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        text-align: center; }
+      .reg-pernoite .list .pernoite-reg label select {
+        border: 0;
+        text-align: center; }
+
+.reg-pernoite .btn-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 999; }
+  .reg-pernoite .btn-footer .btn-salvar {
+    width: 80%;
+    margin-left: 9%;
+    border-color: transparent;
+    border-radius: 0;
+    background-color: #49E25E;
+    color: #fff; }
+    .reg-pernoite .btn-footer .btn-salvar:hover {
+      color: #fff; }
+  .reg-pernoite .btn-footer .btn-cancelar {
+    width: 80%;
+    margin-left: 9%;
+    border-color: transparent;
+    border-radius: 0;
+    background-color: #FF6060;
+    color: #fff; }
+    .reg-pernoite .btn-footer .btn-cancelar:hover {
+      color: #fff; }
+
+.reg-manutencao .list {
+  min-height: 560px; }
+  .reg-manutencao .list .manutencao-title {
+    background-color: #1E8CBE; }
+    .reg-manutencao .list .manutencao-title .icon-routes {
+      width: 10%;
+      display: block;
+      float: left;
+      margin-left: 15px; }
+    .reg-manutencao .list .manutencao-title p {
+      text-align: center;
+      font-size: 24px;
+      color: #fff;
+      display: table-cell;
+      vertical-align: middle;
+      height: 40px;
+      width: 53%; }
+  .reg-manutencao .list .manutencao-reg {
+    margin: 0;
+    padding: 0; }
+    .reg-manutencao .list .manutencao-reg label {
+      margin: 0;
+      padding: 0; }
+      .reg-manutencao .list .manutencao-reg label span {
+        max-width: 100%;
+        width: 100%;
+        background-color: #DEDADA;
+        color: #757575;
+        text-align: center; }
+      .reg-manutencao .list .manutencao-reg label input {
+        max-width: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        text-align: center; }
+      .reg-manutencao .list .manutencao-reg label select {
+        border: 0;
+        text-align: center; }
+
+.reg-manutencao .btn-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 999; }
+  .reg-manutencao .btn-footer .btn-salvar {
+    width: 80%;
+    margin-left: 9%;
+    border-color: transparent;
+    border-radius: 0;
+    background-color: #49E25E;
+    color: #fff; }
+    .reg-manutencao .btn-footer .btn-salvar:hover {
+      color: #fff; }
+  .reg-manutencao .btn-footer .btn-cancelar {
+    width: 80%;
+    margin-left: 9%;
+    border-color: transparent;
+    border-radius: 0;
+    background-color: #FF6060;
+    color: #fff; }
+    .reg-manutencao .btn-footer .btn-cancelar:hover {
       color: #fff; }
 
 @font-face {
