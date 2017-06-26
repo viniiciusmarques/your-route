@@ -1,24 +1,25 @@
-<ion-view view-title="Rotas">
+<ion-view class="minhas-rotas" view-title="Minhas Rotas">
   <ion-content>
     <ion-refresher
   pulling-text="Recarregar..."
   on-refresh="buscaRotasLocal()">
 </ion-refresher>
-    <button  class="button button-block button-positive" cancel-search-button="Limpar" search-placeholder="Pesquisar" cancel-button="Cancelar" reset-button="Limpar" modal-select="" ng-model="filtro" options="filtros" has-search="true" modal-title="Selecione o Filtro">
+    <button  class="button button-block btn-ordernar" cancel-search-button="Limpar" search-placeholder="Pesquisar" cancel-button="Cancelar" reset-button="Limpar" modal-select="" ng-model="filtro" options="filtros" has-search="true" modal-title="Selecione o Filtro">
       ORDENAR POR: {{filtro}}
       <div class="option">
         {{option}}
       </div>
     </button>
     <ion-list ng-init="buscaRotasLocal()">
-      <ion-item ng-repeat="rota in localRotas " can-swipe="swipe">
+      <ion-item class="list-routes" ng-repeat="rota in localRotas " can-swipe="swipe">
+        <img class="icon-routes" src="img/icons/icon-routes.png">
         <ul style="list-style-type:none">
           <li>Partida: {{rota.partida}}</li>
           <li>Destino: {{rota.destino}}</li>
           <li>Data de Partida: {{rota.datapartida | date: 'dd/MM/yyyy'}}</li>
           <li>Data de Entrega: {{rota.dataentrega | date: 'dd/MM/yyyy'}}</li>
         </ul>
-        <ion-option-button class="button-energized" ng-click="verificaRota(rota)">
+        <ion-option-button class="btn-info" ng-click="verificaRota(rota)">
           <i class="icon ion-information-circled"></i>
         </ion-option-button>
       </ion-item>
