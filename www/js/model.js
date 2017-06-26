@@ -43,8 +43,8 @@ app.get('/consultaRotas', function (req, res) {
 		});
 	});
 });
-/*
-app.get('/login', function (req, res) {
+
+app.post('/bancoTempoRotas', function (req, res) {
 
 	// to run a query we can acquire a client from the pool,
 	// run a query on the client, and then return the client to the pool
@@ -52,7 +52,7 @@ app.get('/login', function (req, res) {
 	  if(err) {
 		return console.error('error fetching client from pool', err);
 	  }
-	  client.query('SELECT * FROM tb_usuarios WHERE nomeusuario = \'' + req.body.username + '\' AND senha = \'' + md5(req.body.senha) + '\' AND fg_ativo = 1',
+	  client.query('INSERT INTO tempo (id_rota,data_tempo,hora,local_tempo,status) VALUES(' + req.body.id_rota + ', \'' + req.body.date + '\',\'' + req.body.hora + '\',\'' + req.body.local + '\',\'' + req.body.status + '\')',
       function(err, result) {
 		//call `done()` to release the client back to the pool
 		done();
@@ -66,15 +66,15 @@ app.get('/login', function (req, res) {
 	});
 });
 
-app.get('/buscaDisciplina/:id', function (req, res) {
-  var id = req.params.id;
+app.post('/bancoManutencao', function (req, res) {
+
 	// to run a query we can acquire a client from the pool,
 	// run a query on the client, and then return the client to the pool
 	pool.connect(function(err, client, done) {
 	  if(err) {
 		return console.error('error fetching client from pool', err);
 	  }
-	  client.query('SELECT * FROM tb_disciplinas WHERE id_materia = ' + id,
+	  client.query('INSERT INTO manutencao (id_rota,data_manutencao,hora,valor,tipo) VALUES(' + req.body.id_rota + ', \'' + req.body.date + '\',\'' + req.body.hora + '\',' + req.body.valor + ',\'' + req.body.tipo + '\')',
       function(err, result) {
 		//call `done()` to release the client back to the pool
 		done();
@@ -88,10 +88,7 @@ app.get('/buscaDisciplina/:id', function (req, res) {
 	});
 });
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////REQUISIÇÕES DE INSERÇÃO////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-/*app.post('/insertDisciplina', function (req, res) {
+app.post('/bancoFiscalizacao', function (req, res) {
 
 	// to run a query we can acquire a client from the pool,
 	// run a query on the client, and then return the client to the pool
@@ -99,8 +96,7 @@ app.get('/buscaDisciplina/:id', function (req, res) {
 	  if(err) {
 		return console.error('error fetching client from pool', err);
 	  }
-	  client.query('INSERT INTO tb_disciplinas (id_usuario,nome_disciplina,nome_professor,fg_ativo) '+
-                 'VALUES(1,\''+ req.body.nome_disciplina + '\',\'' + req.body.nome_professor +'\',1)',
+	  client.query('INSERT INTO fiscalizacao (id_rota,data_fiscalizacao,hora,tipo) VALUES(' + req.body.id_rota + ', \'' + req.body.date + '\',\'' + req.body.hora + '\',\'' + req.body.tipo + '\')',
       function(err, result) {
 		//call `done()` to release the client back to the pool
 		done();
@@ -114,7 +110,7 @@ app.get('/buscaDisciplina/:id', function (req, res) {
 	});
 });
 
-app.post('/insertUsuario', function (req, res) {
+app.post('/bancoDescansoPernoite', function (req, res) {
 
 	// to run a query we can acquire a client from the pool,
 	// run a query on the client, and then return the client to the pool
@@ -122,8 +118,7 @@ app.post('/insertUsuario', function (req, res) {
 	  if(err) {
 		return console.error('error fetching client from pool', err);
 	  }
-	  client.query('INSERT INTO tb_usuarios (nome,curso,nomeusuario,senha,fg_ativo) '+
-                 'VALUES(\''+ req.body.nome + '\',\'' + req.body.curso +'\',\'' + req.body.nomeusuario + '\',\'' + md5(req.body.senha) + '\',1)',
+	  client.query('INSERT INTO descansopernoite (id_rota,data_descanso,hora,valor) VALUES(' + req.body.id_rota + ', \'' + req.body.date + '\',\'' + req.body.hora + '\',' + req.body.valor + ')',
       function(err, result) {
 		//call `done()` to release the client back to the pool
 		done();
@@ -137,21 +132,19 @@ app.post('/insertUsuario', function (req, res) {
 	});
 });
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////REQUISIÇÕES DE DELETE/////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-app.put('/deleteDisciplina/:id', function (req, res) {
-  var id = req.params.id;
+app.post('/bancoCliente', function (req, res) {
+
 	// to run a query we can acquire a client from the pool,
 	// run a query on the client, and then return the client to the pool
 	pool.connect(function(err, client, done) {
 	  if(err) {
 		return console.error('error fetching client from pool', err);
 	  }
-	  client.query('UPDATE tb_disciplinas SET fg_ativo = 0 WHERE id_materia = ' + id,
+	  client.query('INSERT INTO cliente (id_rota,data_cliente,hora,observacao) VALUES(' + req.body.id_rota + ', \'' + req.body.date + '\',\'' + req.body.hora + '\',\'' + req.body.observacao + '\')',
       function(err, result) {
 		//call `done()` to release the client back to the pool
 		done();
+
 		if(err) {
 		  return console.error('error running query', err);
 		}
@@ -161,11 +154,7 @@ app.put('/deleteDisciplina/:id', function (req, res) {
 	});
 });
 
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////REQUISIÇÕES DE UPDATE//////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-app.put('/updateDisciplina', function (req, res) {
+app.post('/bancoCargaDescarga', function (req, res) {
 
 	// to run a query we can acquire a client from the pool,
 	// run a query on the client, and then return the client to the pool
@@ -173,10 +162,11 @@ app.put('/updateDisciplina', function (req, res) {
 	  if(err) {
 		return console.error('error fetching client from pool', err);
 	  }
-	  client.query('UPDATE tb_disciplinas SET nome_disciplina = \'' + req.body.nome_disciplina + '\', nome_professor = \'' + req.body.nome_professor + '\' WHERE id_materia = '+ req.body.id_materia,
+	  client.query('INSERT INTO cargadescarga (id_rota,data_cargadescarga,hora,status) VALUES(' + req.body.id_rota + ', \'' + req.body.date + '\',\'' + req.body.hora + '\',\'' + req.body.status + '\')',
       function(err, result) {
 		//call `done()` to release the client back to the pool
 		done();
+
 		if(err) {
 		  return console.error('error running query', err);
 		}
@@ -185,5 +175,49 @@ app.put('/updateDisciplina', function (req, res) {
 		});
 	});
 });
-*/
+
+app.post('/bancoAlimentacao', function (req, res) {
+
+	// to run a query we can acquire a client from the pool,
+	// run a query on the client, and then return the client to the pool
+	pool.connect(function(err, client, done) {
+	  if(err) {
+		return console.error('error fetching client from pool', err);
+	  }
+	  client.query('INSERT INTO alimentacao (id_rota,data_alimentacao,hora,valor) VALUES(' + req.body.id_rota + ', \'' + req.body.date + '\',\'' + req.body.hora + '\',' + req.body.valor + ')',
+      function(err, result) {
+		//call `done()` to release the client back to the pool
+		done();
+
+		if(err) {
+		  return console.error('error running query', err);
+		}
+		res.setHeader('Access-Control-Allow-Origin','*');
+    res.json(result.rows); // servidor retorna a consulta em formato json
+		});
+	});
+});
+
+app.post('/bancoAbastecimento', function (req, res) {
+
+	// to run a query we can acquire a client from the pool,
+	// run a query on the client, and then return the client to the pool
+	pool.connect(function(err, client, done) {
+	  if(err) {
+		return console.error('error fetching client from pool', err);
+	  }
+	  client.query('INSERT INTO abastecimento (id_rota,data_abastecimento,hora,km,valor) VALUES(' + req.body.id_rota + ', \'' + req.body.date + '\',\'' + req.body.hora + '\',' + req.body.km + ',' + req.body.valor + ')',
+      function(err, result) {
+		//call `done()` to release the client back to the pool
+		done();
+
+		if(err) {
+		  return console.error('error running query', err);
+		}
+		res.setHeader('Access-Control-Allow-Origin','*');
+    res.json(result.rows); // servidor retorna a consulta em formato json
+		});
+	});
+});
+
 app.listen(2000);

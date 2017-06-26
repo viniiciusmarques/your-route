@@ -1,4 +1,4 @@
-angular.module('starter').controller('generalController',function($scope, $state, $cordovaGeolocation, $http, $rootScope, HttpService){
+angular.module('starter').controller('generalController',function($scope, $state, $cordovaGeolocation, $http, $rootScope, HttpService, ocorrenciasService){
 
   var options = {timeout: 10000, enableHighAccuracy: true};
 
@@ -114,4 +114,74 @@ $scope.visualizarRota = function($rota){
         swal("Removido!", "Sua rota acaba de ser excluida com sucesso.", "success");
       });
     };
+
+  $scope.sincronizar = function(){
+    var tempo = ocorrenciasService.getTempoRotas();
+    var manutencao = ocorrenciasService.getManutencao();
+    var fiscalizacao = ocorrenciasService.getFiscalizacao();
+    var descansoPernoite = ocorrenciasService.getDescansoPernoite();
+    var cliente = ocorrenciasService.getCliente();
+    var cargaDescarga = ocorrenciasService.getCargaDescarga();
+    var alimentacao = ocorrenciasService.getAlimentacao();
+    var abastecimento = ocorrenciasService.getAbastecimento();
+
+    var cont = 0;
+
+    if(tempo.length != 0){
+      for(cont in tempo){
+        ocorrenciasService.bancoTempoRotas(tempo[cont]);
+      }
+      cont = 0;
+    };
+
+    if(manutencao.length != 0){
+      for(cont in manutencao){
+        ocorrenciasService.bancoManutencao(manutencao[cont]);
+      }
+      cont = 0;
+    };
+
+    if(fiscalizacao.length != 0){
+      for(cont in fiscalizacao){
+        ocorrenciasService.bancoFiscalizacao(fiscalizacao[cont]);
+      }
+      cont = 0;
+    };
+
+    if(descansoPernoite.length != 0){
+      for(cont in descansoPernoite){
+        ocorrenciasService.bancoDescansoPernoite(descansoPernoite[cont]);
+      }
+      cont = 0;
+    };
+
+    if(cliente.length != 0){
+      for(cont in cliente){
+        ocorrenciasService.bancoCliente(cliente[cont]);
+      }
+      cont = 0;
+    };
+
+    if(cargaDescarga.length != 0){
+      for(cont in cargaDescarga){
+        ocorrenciasService.bancoCargaDescarga(cargaDescarga[cont]);
+      }
+      cont = 0;
+    };
+
+    if(alimentacao.length != 0){
+      for(cont in alimentacao){
+        ocorrenciasService.bancoAlimentacao(alimentacao[cont]);
+      }
+      cont = 0;
+    };
+
+    if(abastecimento.length != 0){
+      for(cont in abastecimento){
+        ocorrenciasService.bancoAbastecimento(abastecimento[cont]);
+      }
+      cont = 0;
+    };
+
+  }
 });
