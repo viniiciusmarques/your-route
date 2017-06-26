@@ -11068,6 +11068,69 @@ a.button {
     .reg-fiscalizacao .btn-footer .btn-cancelar:hover {
       color: #fff; }
 
+.reg-cliente .list {
+  min-height: 560px; }
+  .reg-cliente .list .cliente-title {
+    background-color: #FD8A21; }
+    .reg-cliente .list .cliente-title .icon-routes {
+      width: 6%;
+      display: block;
+      float: left;
+      margin-left: 15px; }
+    .reg-cliente .list .cliente-title p {
+      text-align: center;
+      font-size: 24px;
+      color: #fff;
+      display: table-cell;
+      vertical-align: middle;
+      height: 40px;
+      width: 28%; }
+  .reg-cliente .list .cliente-reg {
+    margin: 0;
+    padding: 0; }
+    .reg-cliente .list .cliente-reg label {
+      margin: 0;
+      padding: 0; }
+      .reg-cliente .list .cliente-reg label span {
+        max-width: 100%;
+        width: 100%;
+        background-color: #DEDADA;
+        color: #757575;
+        text-align: center; }
+      .reg-cliente .list .cliente-reg label input {
+        max-width: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        text-align: center; }
+      .reg-cliente .list .cliente-reg label select {
+        border: 0;
+        text-align: center; }
+
+.reg-cliente .btn-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 999; }
+  .reg-cliente .btn-footer .btn-salvar {
+    width: 80%;
+    margin-left: 9%;
+    border-color: transparent;
+    border-radius: 0;
+    background-color: #49E25E;
+    color: #fff; }
+    .reg-cliente .btn-footer .btn-salvar:hover {
+      color: #fff; }
+  .reg-cliente .btn-footer .btn-cancelar {
+    width: 80%;
+    margin-left: 9%;
+    border-color: transparent;
+    border-radius: 0;
+    background-color: #FF6060;
+    color: #fff; }
+    .reg-cliente .btn-footer .btn-cancelar:hover {
+      color: #fff; }
+
 @font-face {
   font-family: "Segoe UI"; }
 
