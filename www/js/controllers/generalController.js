@@ -28,7 +28,7 @@ angular.module('starter').controller('generalController',function($scope, $state
 
 /* Filtro */
  $scope.filtros = [
-     'DataPartida','DataEntrega', 'Distancia', 'destino', 'partida'
+     'datapartida','dataentrega', 'destino', 'partida'
    ];
 
   $scope.buscaRotas = function (){
@@ -182,6 +182,7 @@ $scope.visualizarRota = function($rota){
       }
       cont = 0;
     };
-
+    swal("Sincronizado!", "Dados sincronizados com sucesso.", "success");
+    localStorage.clear();
   }
 });

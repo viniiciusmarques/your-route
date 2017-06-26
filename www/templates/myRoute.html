@@ -11,7 +11,7 @@
       </div>
     </button>
     <ion-list ng-init="buscaRotasLocal()">
-      <ion-item class="list-routes" ng-repeat="rota in localRotas " can-swipe="swipe">
+      <ion-item class="list-routes" ng-repeat="rota in localRotas | orderBy:filtro " can-swipe="swipe">
         <img class="icon-routes" src="img/icons/icon-routes.png">
         <ul style="list-style-type:none">
           <li>Partida: {{rota.partida}}</li>

@@ -4,6 +4,12 @@ const id = $rootScope.detalheRota.id_rota;
 $scope.tempo = {id_rota:id};
 $scope.info = {id_rota:id};
 
+var hora = null;
+
+$scope.continuarRota = function(){
+  $state.go('menu.route');
+  console.log(id);
+}
 
 $scope.dataPicker = function(){
   var ipObj1 = {
@@ -13,19 +19,18 @@ $scope.dataPicker = function(){
     } else {
       var selectedTime = new Date(val * 1000);
       console.log('Selected epoch is : ', val, 'and the time is ', selectedTime.getUTCHours(), 'H :', selectedTime.getUTCMinutes(), 'M');
-      var data = selectedTime.getUTCHours()+':'+selectedTime.getUTCMinutes();
-      $("#hora").text(data);
+      var hora = selectedTime.getUTCHours()+':'+selectedTime.getUTCMinutes();
     }
   },
   inputTime: 50400,   //Optional
-  format: 12,         //Optional
+  format: 24,         //Optional
   step: 15,           //Optional
   setLabel: 'Salvar'    //Optional
 };
 
-return ionicTimePicker.openTimePicker(ipObj1);
+ ionicTimePicker.openTimePicker(ipObj1);
+ console.log(ipObj1);
 }
-
 
   var sweetAlert = function(retorno){
     if(retorno == true){
