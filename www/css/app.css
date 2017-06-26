@@ -10339,6 +10339,54 @@ a.button {
     .ocorrencia-carga .btn-footer .btn-voltar:hover {
       color: #fff; }
 
+.ocorrencia-alimentacao .list {
+  min-height: 600px; }
+  .ocorrencia-alimentacao .list .alimentacao-title {
+    background-color: #59B0D4; }
+    .ocorrencia-alimentacao .list .alimentacao-title .icon-routes {
+      width: 10%;
+      display: block;
+      float: left;
+      margin-left: 15px; }
+    .ocorrencia-alimentacao .list .alimentacao-title p {
+      text-align: center;
+      font-size: 24px;
+      color: #fff;
+      display: table-cell;
+      vertical-align: middle;
+      height: 40px;
+      width: 53%; }
+  .ocorrencia-alimentacao .list .alimentacao-cabecalho {
+    margin: 0;
+    padding: 0;
+    background-color: #DEDADA; }
+    .ocorrencia-alimentacao .list .alimentacao-cabecalho .col {
+      font-size: 14px;
+      color: #868a8c; }
+
+.ocorrencia-alimentacao .btn-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%; }
+  .ocorrencia-alimentacao .btn-footer .btn-novo {
+    width: 80%;
+    margin-left: 9%;
+    border-color: transparent;
+    border-radius: 0;
+    background-color: #49E25E;
+    color: #fff; }
+    .ocorrencia-alimentacao .btn-footer .btn-novo:hover {
+      color: #fff; }
+  .ocorrencia-alimentacao .btn-footer .btn-voltar {
+    width: 80%;
+    margin-left: 9%;
+    border-color: transparent;
+    border-radius: 0;
+    background-color: #FFD95E;
+    color: #fff; }
+    .ocorrencia-alimentacao .btn-footer .btn-voltar:hover {
+      color: #fff; }
+
 @font-face {
   font-family: "Segoe UI"; }
 

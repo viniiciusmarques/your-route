@@ -1,11 +1,11 @@
-<ion-view view-title="Diario de Bordo" ng-init="getAlimentacao()">
+<ion-view class="ocorrencia-alimentacao" view-title="Diario de Bordo" ng-init="getAlimentacao()">
 	<ion-content>
 		<div class="list">
-		  <div class="item item-divider" >
-				<span class="icon ion-coffee"></span>
- 				Alimentação
-		  </div>
-			<div class="item">
+			<div class="item item-divider alimentacao-title" >
+				<img class="icon-routes" src="img/icons/beer.png">
+				<p>Alimentação</p>
+			</div>
+			<div class="item alimentacao-cabecalho">
 				<div class="row">
 					<div class="col">
 						Data
@@ -29,12 +29,14 @@
 						{{alimentacao.valor}}
 					</div>
 					<div class="col">
-							<button class="button icon ion-trash-a" ng-click="deleteAlimentacao(alimentacao)"></button>
+						<button class="button icon ion-trash-a" ng-click="deleteAlimentacao(alimentacao)"></button>
 					</div>
 				</div>
 			</div>
-	</div>
-		<button class="button button-block button-balanced" ui-sref="menu.cadAlimentacao"> Inserir Novo Registro </button>
-    <button class="button button-block button-energized" ui-sref="menu.ocorrencias"> Voltar </button>
+		</div>
+		<div class="btn-footer">
+		<button class="button button-block btn-novo" ui-sref="menu.cadAlimentacao"> Inserir Novo Registro </button>
+			<button class="button button-block btn-voltar" ui-sref="menu.ocorrencias"> Voltar </button>
+		</div>
 	</ion-content>
 </ion-view>
