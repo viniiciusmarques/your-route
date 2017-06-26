@@ -1,7 +1,8 @@
-<ion-view view-title="Detalhes da rota">
-  <ion-nav-bar class="bar bar-stable">
-      <ion-nav-back-button>Voltar</ion-nav-back-button>
-  </ion-nav-bar>
+<ion-toolbar>
+  <button ion-button menuToggle></button>
+</ion-toolbar>
+
+<ion-view view-title="Detalhes da Rota">
   <ion-content>
     <ul class="list">
       <li class="item">Partida: {{detalheRota.partida}}</li>
@@ -13,5 +14,6 @@
     <button type="button" class="button button-positive button-block" ng-if="detalheRota.chave == false" ng-click="localRota(detalheRota)"> + MINHAS ROTAS</button>
     <button type="button" class="button button-assertive button-block" ng-if="detalheRota.chave == true" ng-click="removeLocalRota(detalheRota)"> REMOVER </button>
     <button type="button" class="button button-balanced button-block" ng-if="detalheRota.chave == true" ng-click="visualizarRota(detalheRota)"> INICIAR ROTA </button>
+    <button type="button" class="button button-balanced button-block" ng-click="visualizarRota(detalheRota)"> VOLTAR </button>
   </ion-content>
 </ion-view>
