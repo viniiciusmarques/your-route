@@ -1,8 +1,31 @@
-angular.module('starter').controller('ocorrenciasController',   function($scope,ocorrenciasService,$state,$rootScope){
+angular.module('starter').controller('ocorrenciasController',   function($scope,ocorrenciasService,$state,$rootScope,ionicTimePicker){
 const id = $rootScope.detalheRota.id_rota;
 
 $scope.tempo = {id_rota:id};
 $scope.info = {id_rota:id};
+
+
+$scope.dataPicker = function(){
+  var ipObj1 = {
+  callback: function (val) {      //Mandatory
+    if (typeof (val) === 'undefined') {
+      console.log('Time not selected');
+    } else {
+      var selectedTime = new Date(val * 1000);
+      console.log('Selected epoch is : ', val, 'and the time is ', selectedTime.getUTCHours(), 'H :', selectedTime.getUTCMinutes(), 'M');
+      var data = selectedTime.getUTCHours()+':'+selectedTime.getUTCMinutes();
+      $("#hora").text(data);
+    }
+  },
+  inputTime: 50400,   //Optional
+  format: 12,         //Optional
+  step: 15,           //Optional
+  setLabel: 'Salvar'    //Optional
+};
+
+return ionicTimePicker.openTimePicker(ipObj1);
+}
+
 
   var sweetAlert = function(retorno){
     if(retorno == true){

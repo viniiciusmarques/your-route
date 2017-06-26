@@ -1,4 +1,4 @@
-angular.module('starter').service('ocorrenciasService', function(){
+angular.module('starter').service('ocorrenciasService', function($http){
   return {
     Tempo: function($tempo){
       var tempo = [];
@@ -44,6 +44,14 @@ angular.module('starter').service('ocorrenciasService', function(){
        // return novo;
     },
 
+    bancoTempoRotas: function(info){
+      return $http.post('http://localhost:2000/bancoTempoRotas',info)
+        .then(function(response) {
+         return response.data;
+      });;
+    },
+
+
     cargaDescarga: function($info){
       var cargaDescarga = [];
 
@@ -84,6 +92,10 @@ angular.module('starter').service('ocorrenciasService', function(){
         localStorage.setItem('cargaDescarga', paraString);
         return true;
        // return novo;
+    },
+
+    bancoCargaDescarga: function(info){
+      return $http.post('http://localhost:2000/bancoCargaDescarga',info);
     },
 
     alimentacao: function($info){
@@ -128,6 +140,10 @@ angular.module('starter').service('ocorrenciasService', function(){
        // return novo;
     },
 
+    bancoAlimentacao: function(info){
+      return $http.post('http://localhost:2000/bancoAlimentacao',info);
+    },
+
     descansoPernoite: function($info){
       var descansoPernoite = [];
 
@@ -168,6 +184,10 @@ angular.module('starter').service('ocorrenciasService', function(){
         localStorage.setItem('descansoPernoite', paraString);
         return true;
        // return novo;
+    },
+
+    bancoDescansoPernoite: function(info){
+      return $http.post('http://localhost:2000/bancoDescansoPernoite',info);
     },
 
     manutencao: function($info){
@@ -212,6 +232,10 @@ angular.module('starter').service('ocorrenciasService', function(){
        // return novo;
     },
 
+    bancoManutencao: function(info){
+      return $http.post('http://localhost:2000/bancoManutencao',info);
+    },
+
     abastecimento: function($info){
       var abastecimento = [];
 
@@ -253,6 +277,11 @@ angular.module('starter').service('ocorrenciasService', function(){
         return true;
        // return novo;
     },
+
+    bancoAbastecimento: function(info){
+      return $http.post('http://localhost:2000/bancoAbastecimento',info);
+    },
+
 
     fiscalizacao: function($info){
       var fiscalizacao = [];
@@ -296,6 +325,11 @@ angular.module('starter').service('ocorrenciasService', function(){
        // return novo;
     },
 
+    bancoFiscalizacao: function(info){
+      return $http.post('http://localhost:2000/bancoFiscalizacao',info);
+    },
+
+
     cliente: function($info){
       var cliente = [];
 
@@ -337,5 +371,10 @@ angular.module('starter').service('ocorrenciasService', function(){
         return true;
        // return novo;
     },
+
+    bancoCliente: function(info){
+      return $http.post('http://localhost:2000/bancoCliente',info);
+    },
+
   }
 });
