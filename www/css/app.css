@@ -9977,7 +9977,6 @@ a.button {
   width: 100%;
   height: 65px;
   position: absolute;
-  bottom: 0;
   margin: 0;
   padding-top: 10px;
   border-color: transparent;
@@ -10157,63 +10156,84 @@ a.button {
       margin-left: 35%; }
     .menu-ocorrencias .diario-bordo ion-item a p {
       color: #fff;
-      text-align: center; }
+      text-align: center;
+      font-weight: 500; }
 
 .menu-ocorrencias .diario-bordo .tempo {
   background-color: #005684; }
   .menu-ocorrencias .diario-bordo .tempo a {
     background-color: #005684; }
     .menu-ocorrencias .diario-bordo .tempo a img {
-      width: 48%; }
+      width: 45%;
+      margin-left: 28%;
+      margin-top: 10px;
+      margin-bottom: 3px; }
 
 .menu-ocorrencias .diario-bordo .carga {
   background-color: #1E8CBE; }
   .menu-ocorrencias .diario-bordo .carga a {
     background-color: #1E8CBE; }
     .menu-ocorrencias .diario-bordo .carga a img {
-      width: 43%; }
+      width: 43%;
+      margin-left: 30%; }
 
 .menu-ocorrencias .diario-bordo .alimentacao {
   background-color: #59B0D4; }
   .menu-ocorrencias .diario-bordo .alimentacao a {
     background-color: #59B0D4; }
     .menu-ocorrencias .diario-bordo .alimentacao a img {
-      width: 47%; }
+      width: 43%;
+      margin-left: 31%;
+      margin-top: 15px;
+      margin-bottom: 5px; }
 
 .menu-ocorrencias .diario-bordo .pernoite {
   background-color: #82BCD4; }
   .menu-ocorrencias .diario-bordo .pernoite a {
     background-color: #82BCD4; }
     .menu-ocorrencias .diario-bordo .pernoite a img {
-      width: 31%; }
+      width: 31%;
+      margin-top: 8px; }
 
 .menu-ocorrencias .diario-bordo .manutencao {
   background-color: #FFD95E; }
   .menu-ocorrencias .diario-bordo .manutencao a {
     background-color: #FFD95E; }
     .menu-ocorrencias .diario-bordo .manutencao a img {
-      width: 48%; }
+      width: 45%;
+      margin-left: 28%;
+      margin-top: 15px;
+      margin-bottom: 5px; }
 
 .menu-ocorrencias .diario-bordo .abastecimento {
   background-color: #DF9E2E; }
   .menu-ocorrencias .diario-bordo .abastecimento a {
     background-color: #DF9E2E; }
     .menu-ocorrencias .diario-bordo .abastecimento a img {
-      width: 43%; }
+      width: 38%;
+      margin-left: 32%;
+      margin-top: 15px;
+      margin-bottom: 2px; }
 
 .menu-ocorrencias .diario-bordo .fiscalizacao {
   background-color: #F5851F; }
   .menu-ocorrencias .diario-bordo .fiscalizacao a {
     background-color: #F5851F; }
     .menu-ocorrencias .diario-bordo .fiscalizacao a img {
-      width: 48%; }
+      width: 47%;
+      margin-left: 28%;
+      margin-top: 11px;
+      margin-bottom: 2px; }
 
 .menu-ocorrencias .diario-bordo .cliente {
   background-color: #FD8A21; }
   .menu-ocorrencias .diario-bordo .cliente a {
     background-color: #FD8A21; }
     .menu-ocorrencias .diario-bordo .cliente a img {
-      width: 26%; }
+      width: 25%;
+      margin-left: 38%;
+      margin-top: 11px;
+      margin-bottom: 9px; }
 
 @font-face {
   font-family: "Segoe UI"; }
