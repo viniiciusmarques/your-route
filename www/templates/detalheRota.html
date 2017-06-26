@@ -14,6 +14,6 @@
     <button type="button" class="button button-positive button-block" ng-if="detalheRota.chave == false" ng-click="localRota(detalheRota)"> + MINHAS ROTAS</button>
     <button type="button" class="button button-assertive button-block" ng-if="detalheRota.chave == true" ng-click="removeLocalRota(detalheRota)"> REMOVER </button>
     <button type="button" class="button button-balanced button-block" ng-if="detalheRota.chave == true" ng-click="visualizarRota(detalheRota)"> INICIAR ROTA </button>
-    <button type="button" class="button button-balanced button-block" ng-click="visualizarRota(detalheRota)"> VOLTAR </button>
+    <button type="button" class="button button-balanced button-block" ng-click="$ionicGoBack()"> VOLTAR </button>
   </ion-content>
 </ion-view>
