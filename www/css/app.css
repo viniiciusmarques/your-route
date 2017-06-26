@@ -10942,6 +10942,132 @@ a.button {
     .reg-manutencao .btn-footer .btn-cancelar:hover {
       color: #fff; }
 
+.reg-abastecimento .list {
+  min-height: 560px; }
+  .reg-abastecimento .list .abastecimento-title {
+    background-color: #DF9E2E; }
+    .reg-abastecimento .list .abastecimento-title .icon-routes {
+      width: 10%;
+      display: block;
+      float: left;
+      margin-left: 15px; }
+    .reg-abastecimento .list .abastecimento-title p {
+      text-align: center;
+      font-size: 24px;
+      color: #fff;
+      display: table-cell;
+      vertical-align: middle;
+      height: 40px;
+      width: 53%; }
+  .reg-abastecimento .list .abastecimento-reg {
+    margin: 0;
+    padding: 0; }
+    .reg-abastecimento .list .abastecimento-reg label {
+      margin: 0;
+      padding: 0; }
+      .reg-abastecimento .list .abastecimento-reg label span {
+        max-width: 100%;
+        width: 100%;
+        background-color: #DEDADA;
+        color: #757575;
+        text-align: center; }
+      .reg-abastecimento .list .abastecimento-reg label input {
+        max-width: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        text-align: center; }
+      .reg-abastecimento .list .abastecimento-reg label select {
+        border: 0;
+        text-align: center; }
+
+.reg-abastecimento .btn-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 999; }
+  .reg-abastecimento .btn-footer .btn-salvar {
+    width: 80%;
+    margin-left: 9%;
+    border-color: transparent;
+    border-radius: 0;
+    background-color: #49E25E;
+    color: #fff; }
+    .reg-abastecimento .btn-footer .btn-salvar:hover {
+      color: #fff; }
+  .reg-abastecimento .btn-footer .btn-cancelar {
+    width: 80%;
+    margin-left: 9%;
+    border-color: transparent;
+    border-radius: 0;
+    background-color: #FF6060;
+    color: #fff; }
+    .reg-abastecimento .btn-footer .btn-cancelar:hover {
+      color: #fff; }
+
+.reg-fiscalizacao .list {
+  min-height: 560px; }
+  .reg-fiscalizacao .list .fiscalizacao-title {
+    background-color: #DF9E2E; }
+    .reg-fiscalizacao .list .fiscalizacao-title .icon-routes {
+      width: 10%;
+      display: block;
+      float: left;
+      margin-left: 15px; }
+    .reg-fiscalizacao .list .fiscalizacao-title p {
+      text-align: center;
+      font-size: 24px;
+      color: #fff;
+      display: table-cell;
+      vertical-align: middle;
+      height: 40px;
+      width: 53%; }
+  .reg-fiscalizacao .list .fiscalizacao-reg {
+    margin: 0;
+    padding: 0; }
+    .reg-fiscalizacao .list .fiscalizacao-reg label {
+      margin: 0;
+      padding: 0; }
+      .reg-fiscalizacao .list .fiscalizacao-reg label span {
+        max-width: 100%;
+        width: 100%;
+        background-color: #DEDADA;
+        color: #757575;
+        text-align: center; }
+      .reg-fiscalizacao .list .fiscalizacao-reg label input {
+        max-width: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        text-align: center; }
+      .reg-fiscalizacao .list .fiscalizacao-reg label select {
+        border: 0;
+        text-align: center; }
+
+.reg-fiscalizacao .btn-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 999; }
+  .reg-fiscalizacao .btn-footer .btn-salvar {
+    width: 80%;
+    margin-left: 9%;
+    border-color: transparent;
+    border-radius: 0;
+    background-color: #49E25E;
+    color: #fff; }
+    .reg-fiscalizacao .btn-footer .btn-salvar:hover {
+      color: #fff; }
+  .reg-fiscalizacao .btn-footer .btn-cancelar {
+    width: 80%;
+    margin-left: 9%;
+    border-color: transparent;
+    border-radius: 0;
+    background-color: #FF6060;
+    color: #fff; }
+    .reg-fiscalizacao .btn-footer .btn-cancelar:hover {
+      color: #fff; }
+
 @font-face {
   font-family: "Segoe UI"; }
 
