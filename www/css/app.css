@@ -9935,14 +9935,69 @@ a.button {
   background-color: #F9E878 !important;
   color: #000 !important; }
 
-.sidebar .user img {
-  width: 40%; }
+.sidebar .info-user {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important; }
+  .sidebar .info-user .user img {
+    width: 40%; }
+  .sidebar .info-user .user p {
+    margin-top: 25px;
+    margin-left: 45%;
+    font-weight: 300; }
+    .sidebar .info-user .user p strong {
+      font-weight: 500;
+      font-size: 20px; }
 
-.sidebar .user p {
-  margin-top: 25px;
-  margin-left: 45%; }
-  .sidebar .user p strong {
-    font-size: 20px; }
+.sidebar .menu-list .item-icon-left {
+  background-color: #DEDADA !important;
+  border-bottom: 1px #fff solid; }
+  .sidebar .menu-list .item-icon-left a {
+    color: #585858;
+    background-color: #DEDADA !important;
+    border-bottom: 1px #fff solid;
+    height: 65px;
+    display: block;
+    padding-top: 22px; }
+    .sidebar .menu-list .item-icon-left a i {
+      width: 10%;
+      padding-left: 6px;
+      color: #fff;
+      font-size: 20px;
+      text-align: left; }
+
+.sidebar .menu-list .paradas a {
+  padding-top: 10px; }
+
+.sidebar .btn-logoff {
+  width: 100%;
+  height: 65px;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  padding-top: 10px;
+  border-color: transparent;
+  background-color: #ef473a;
+  color: #fff;
+  font-size: 20px;
+  text-align: left; }
+  .sidebar .btn-logoff i {
+    width: 20%;
+    float: left;
+    text-align: right;
+    color: #fff;
+    text-align: right; }
+  .sidebar .btn-logoff p {
+    width: 75%;
+    margin: 0;
+    float: left;
+    display: block;
+    text-align: center; }
+
+.sidebar .bar-header h1 {
+  text-align: center; }
+
+.sidebar .overflow-scroll {
+  overflow-y: hidden; }
 
 .scroll {
   height: 100%; }

@@ -12,7 +12,7 @@
       <h1 class="title" align-title="center">Menu</h1>
     </ion-header-bar>
     <ion-content>
-      <div class="list">
+      <div class="list info-user">
         <div class="item item-divider">
           <h4>{{dados}}</h4>
         </div>
@@ -23,7 +23,7 @@
           </p>
         </div>
       </div>
-      <ion-list>
+      <ion-list class="menu-list">
         <ion-item menu-close class="item-icon-left" ui-sref="menu.home">
           <i class="icon ion-ios-home placeholder-icon"></i>
           Home
@@ -36,7 +36,7 @@
           <i class="icon ion-ios-location placeholder-icon"></i>
           Rotas
         </ion-item>
-        <ion-item menu-close class="item-icon-left" ui-sref="#">
+        <ion-item menu-close class="item-icon-left paradas" ui-sref="#">
           <i class="icon ion-map placeholder-icon"></i>
           Paradas <br>
           <sub>(Postos, Alimentação e Hoteis)</sub>
@@ -49,15 +49,14 @@
           <i class="icon ion-help placeholder-icon"></i>
           Ajuda
         </ion-item>
-
-        <a ui-sref="login" class="button button-full button-assertive">
-          <i class="icon ion-power placeholder-icon" style="color:white"></i>
-          Sair
-        </a>
         <!-- <ion-item menu-close class="item-icon-left" ui-sref="login">
 
         </ion-item> -->
       </ion-list>
+      <a ui-sref="login" class="button button-full btn-logoff">
+          <i class="icon ion-power placeholder-icon"></i>
+          <p>Sair</p>
+      </a>
     </ion-content>
   </ion-side-menu>
 </ion-side-menus>
