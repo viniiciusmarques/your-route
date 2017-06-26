@@ -3,7 +3,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('starter', ['ionic','ngCordova','ionic-modal-select'])
+angular.module('starter', ['ionic','ngCordova','ionic-modal-select','ionic-timepicker'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -319,7 +319,7 @@ angular.module('starter').controller('apiMaps',function($scope, $state, $cordova
 //FIM GOOGLE MAPS
 });
 
-angular.module('starter').controller('generalController',function($scope, $state, $cordovaGeolocation, $http, $rootScope, HttpService){
+angular.module('starter').controller('generalController',function($scope, $state, $cordovaGeolocation, $http, $rootScope, HttpService, ocorrenciasService){
 
   var options = {timeout: 10000, enableHighAccuracy: true};
 
@@ -435,13 +435,106 @@ $scope.visualizarRota = function($rota){
         swal("Removido!", "Sua rota acaba de ser excluida com sucesso.", "success");
       });
     };
+
+  $scope.sincronizar = function(){
+    var tempo = ocorrenciasService.getTempoRotas();
+    var manutencao = ocorrenciasService.getManutencao();
+    var fiscalizacao = ocorrenciasService.getFiscalizacao();
+    var descansoPernoite = ocorrenciasService.getDescansoPernoite();
+    var cliente = ocorrenciasService.getCliente();
+    var cargaDescarga = ocorrenciasService.getCargaDescarga();
+    var alimentacao = ocorrenciasService.getAlimentacao();
+    var abastecimento = ocorrenciasService.getAbastecimento();
+
+    var cont = 0;
+
+    if(tempo.length != 0){
+      for(cont in tempo){
+        ocorrenciasService.bancoTempoRotas(tempo[cont]);
+      }
+      cont = 0;
+    };
+
+    if(manutencao.length != 0){
+      for(cont in manutencao){
+        ocorrenciasService.bancoManutencao(manutencao[cont]);
+      }
+      cont = 0;
+    };
+
+    if(fiscalizacao.length != 0){
+      for(cont in fiscalizacao){
+        ocorrenciasService.bancoFiscalizacao(fiscalizacao[cont]);
+      }
+      cont = 0;
+    };
+
+    if(descansoPernoite.length != 0){
+      for(cont in descansoPernoite){
+        ocorrenciasService.bancoDescansoPernoite(descansoPernoite[cont]);
+      }
+      cont = 0;
+    };
+
+    if(cliente.length != 0){
+      for(cont in cliente){
+        ocorrenciasService.bancoCliente(cliente[cont]);
+      }
+      cont = 0;
+    };
+
+    if(cargaDescarga.length != 0){
+      for(cont in cargaDescarga){
+        ocorrenciasService.bancoCargaDescarga(cargaDescarga[cont]);
+      }
+      cont = 0;
+    };
+
+    if(alimentacao.length != 0){
+      for(cont in alimentacao){
+        ocorrenciasService.bancoAlimentacao(alimentacao[cont]);
+      }
+      cont = 0;
+    };
+
+    if(abastecimento.length != 0){
+      for(cont in abastecimento){
+        ocorrenciasService.bancoAbastecimento(abastecimento[cont]);
+      }
+      cont = 0;
+    };
+
+  }
 });
 
-angular.module('starter').controller('ocorrenciasController',   function($scope,ocorrenciasService,$state,$rootScope){
+angular.module('starter').controller('ocorrenciasController',   function($scope,ocorrenciasService,$state,$rootScope,ionicTimePicker){
 const id = $rootScope.detalheRota.id_rota;
 
 $scope.tempo = {id_rota:id};
 $scope.info = {id_rota:id};
+
+
+$scope.dataPicker = function(){
+  var ipObj1 = {
+  callback: function (val) {      //Mandatory
+    if (typeof (val) === 'undefined') {
+      console.log('Time not selected');
+    } else {
+      var selectedTime = new Date(val * 1000);
+      console.log('Selected epoch is : ', val, 'and the time is ', selectedTime.getUTCHours(), 'H :', selectedTime.getUTCMinutes(), 'M');
+      var data = selectedTime.getUTCHours()+':'+selectedTime.getUTCMinutes();
+      $("#hora").text(data);
+    }
+  },
+  inputTime: 50400,   //Optional
+  format: 12,         //Optional
+  step: 15,           //Optional
+  setLabel: 'Salvar'    //Optional
+};
+
+return ionicTimePicker.openTimePicker(ipObj1);
+}
+
 
   var sweetAlert = function(retorno){
     if(retorno == true){

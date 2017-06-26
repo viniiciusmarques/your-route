@@ -2,8 +2,10 @@
   <button ion-button menuToggle></button>
 </ion-toolbar>
 
-<ion-view view-title="Detalhes da Rota">
+<ion-view class="detalhes-rotas" view-title="Detalhes da Rota">
   <ion-content>
+    <img class="icon-routes" src="img/icons/icon-routes.png">
+    <hr>
     <ul class="list">
       <li class="item">Partida: {{detalheRota.partida}}</li>
       <li class="item">Destino: {{detalheRota.destino}}</li>
@@ -11,9 +13,9 @@
       <li class="item">Data de Entrega: {{detalheRota.dataentrega | date: 'dd/MM/yyyy'}}</li>
     </ul>
     <hr>
-    <button type="button" class="button button-positive button-block" ng-if="detalheRota.chave == false" ng-click="localRota(detalheRota)"> + MINHAS ROTAS</button>
-    <button type="button" class="button button-assertive button-block" ng-if="detalheRota.chave == true" ng-click="removeLocalRota(detalheRota)"> REMOVER </button>
-    <button type="button" class="button button-balanced button-block" ng-if="detalheRota.chave == true" ng-click="visualizarRota(detalheRota)"> INICIAR ROTA </button>
-    <button type="button" class="button button-balanced button-block" ng-click="$ionicGoBack()"> VOLTAR </button>
+    <button type="button" class="button button-block btn-adicionar" ng-if="detalheRota.chave == false" ng-click="localRota(detalheRota)"> + MINHAS ROTAS</button>
+    <button type="button" class="button button-block btn-remover" ng-if="detalheRota.chave == true" ng-click="removeLocalRota(detalheRota)"> REMOVER </button>
+    <button type="button" class="button button-block btn-iniciar" ng-if="detalheRota.chave == true" ng-click="visualizarRota(detalheRota)"> INICIAR ROTA </button>
+    <button type="button" class="button button-block btn-voltar" ng-click="$ionicGoBack()"> VOLTAR </button>
   </ion-content>
 </ion-view>
