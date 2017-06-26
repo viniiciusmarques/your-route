@@ -2,7 +2,15 @@
 	.info-user {
 		padding-bottom: 0 !important;
 		margin-bottom: 0 !important;
+
+		.item-divider {
+			border: 0;
+		}
+
 		.user {
+			background-color: #F2F2F2;
+			border: 0;
+			
 			img {
 				width: 40%;
 			}

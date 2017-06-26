@@ -9938,15 +9938,20 @@ a.button {
 .sidebar .info-user {
   padding-bottom: 0 !important;
   margin-bottom: 0 !important; }
-  .sidebar .info-user .user img {
-    width: 40%; }
-  .sidebar .info-user .user p {
-    margin-top: 25px;
-    margin-left: 45%;
-    font-weight: 300; }
-    .sidebar .info-user .user p strong {
-      font-weight: 500;
-      font-size: 20px; }
+  .sidebar .info-user .item-divider {
+    border: 0; }
+  .sidebar .info-user .user {
+    background-color: #F2F2F2;
+    border: 0; }
+    .sidebar .info-user .user img {
+      width: 40%; }
+    .sidebar .info-user .user p {
+      margin-top: 25px;
+      margin-left: 45%;
+      font-weight: 300; }
+      .sidebar .info-user .user p strong {
+        font-weight: 500;
+        font-size: 20px; }
 
 .sidebar .menu-list .item-icon-left {
   background-color: #DEDADA !important;
