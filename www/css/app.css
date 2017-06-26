@@ -10243,6 +10243,54 @@ a.button {
   color: #fff;
   margin: 0; }
 
+.ocorrencia-tempo .list {
+  min-height: 600px; }
+  .ocorrencia-tempo .list .tempo-title {
+    background-color: #005684; }
+    .ocorrencia-tempo .list .tempo-title .icon-routes {
+      width: 10%;
+      display: block;
+      float: left;
+      margin-left: 15px; }
+    .ocorrencia-tempo .list .tempo-title p {
+      text-align: center;
+      font-size: 24px;
+      color: #fff;
+      display: table-cell;
+      vertical-align: middle;
+      height: 40px;
+      width: 53%; }
+  .ocorrencia-tempo .list .tempo-cabecalho {
+    margin: 0;
+    padding: 0;
+    background-color: #DEDADA; }
+    .ocorrencia-tempo .list .tempo-cabecalho .col {
+      font-size: 14px;
+      color: #868a8c; }
+
+.ocorrencia-tempo .btn-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%; }
+  .ocorrencia-tempo .btn-footer .btn-novo {
+    width: 80%;
+    margin-left: 9%;
+    border-color: transparent;
+    border-radius: 0;
+    background-color: #49E25E;
+    color: #fff; }
+    .ocorrencia-tempo .btn-footer .btn-novo:hover {
+      color: #fff; }
+  .ocorrencia-tempo .btn-footer .btn-voltar {
+    width: 80%;
+    margin-left: 9%;
+    border-color: transparent;
+    border-radius: 0;
+    background-color: #FFD95E;
+    color: #fff; }
+    .ocorrencia-tempo .btn-footer .btn-voltar:hover {
+      color: #fff; }
+
 @font-face {
   font-family: "Segoe UI"; }
 
