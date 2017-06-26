@@ -10235,6 +10235,14 @@ a.button {
       margin-top: 11px;
       margin-bottom: 9px; }
 
+.menu-ocorrencias .btn-voltar {
+  height: 60px;
+  border-color: transparent;
+  border-radius: 0;
+  background-color: #393737;
+  color: #fff;
+  margin: 0; }
+
 @font-face {
   font-family: "Segoe UI"; }
 
