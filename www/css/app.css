@@ -10595,7 +10595,7 @@ a.button {
       display: table-cell;
       vertical-align: middle;
       height: 40px;
-      width: 53%; }
+      width: 28%; }
   .ocorrencia-cliente .list .cliente-cabecalho {
     margin: 0;
     padding: 0;
@@ -10625,6 +10625,69 @@ a.button {
     background-color: #FFD95E;
     color: #fff; }
     .ocorrencia-cliente .btn-footer .btn-voltar:hover {
+      color: #fff; }
+
+.reg-tempo .list {
+  min-height: 565px; }
+  .reg-tempo .list .tempo-title {
+    background-color: #005684; }
+    .reg-tempo .list .tempo-title .icon-routes {
+      width: 10%;
+      display: block;
+      float: left;
+      margin-left: 15px; }
+    .reg-tempo .list .tempo-title p {
+      text-align: center;
+      font-size: 24px;
+      color: #fff;
+      display: table-cell;
+      vertical-align: middle;
+      height: 40px;
+      width: 53%; }
+  .reg-tempo .list .tempo-reg {
+    margin: 0;
+    padding: 0; }
+    .reg-tempo .list .tempo-reg label {
+      margin: 0;
+      padding: 0; }
+      .reg-tempo .list .tempo-reg label span {
+        max-width: 100%;
+        width: 100%;
+        background-color: #DEDADA;
+        color: #757575;
+        text-align: center; }
+      .reg-tempo .list .tempo-reg label input {
+        max-width: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        text-align: center; }
+      .reg-tempo .list .tempo-reg label select {
+        border: 0;
+        text-align: center; }
+
+.reg-tempo .btn-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 999; }
+  .reg-tempo .btn-footer .btn-salvar {
+    width: 80%;
+    margin-left: 9%;
+    border-color: transparent;
+    border-radius: 0;
+    background-color: #49E25E;
+    color: #fff; }
+    .reg-tempo .btn-footer .btn-salvar:hover {
+      color: #fff; }
+  .reg-tempo .btn-footer .btn-cancelar {
+    width: 80%;
+    margin-left: 9%;
+    border-color: transparent;
+    border-radius: 0;
+    background-color: #FFD95E;
+    color: #fff; }
+    .reg-tempo .btn-footer .btn-cancelar:hover {
       color: #fff; }
 
 @font-face {

@@ -21,6 +21,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
 
+// CSS das telas do projeto
 @import "modules/_login";
 @import "modules/_cadastro";
 @import "modules/_sidebar";
@@ -37,7 +38,16 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 @import "modules/ocorrencias/_ocorrencia-abastecimento";
 @import "modules/ocorrencias/_ocorrencia-fiscalizacao";
 @import "modules/ocorrencias/_ocorrencia-cliente";
+@import "modules/ocorrencias/registros/_reg-tempo";
+@import "modules/ocorrencias/registros/_reg-carga";
+@import "modules/ocorrencias/registros/_reg-alimentacao";
+@import "modules/ocorrencias/registros/_reg-pernoite";
+@import "modules/ocorrencias/registros/_reg-manutencao";
+@import "modules/ocorrencias/registros/_reg-abastecimento";
+@import "modules/ocorrencias/registros/_reg-fiscalizacao";
+@import "modules/ocorrencias/registros/_reg-cliente";
 
+// Fonte padrão do projeto
 @font-face {
   font-family: "Segoe UI";
 }
