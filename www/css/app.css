@@ -10690,6 +10690,132 @@ a.button {
     .reg-tempo .btn-footer .btn-cancelar:hover {
       color: #fff; }
 
+.reg-carga .list {
+  min-height: 560px; }
+  .reg-carga .list .carga-title {
+    background-color: #1E8CBE; }
+    .reg-carga .list .carga-title .icon-routes {
+      width: 10%;
+      display: block;
+      float: left;
+      margin-left: 15px; }
+    .reg-carga .list .carga-title p {
+      text-align: center;
+      font-size: 24px;
+      color: #fff;
+      display: table-cell;
+      vertical-align: middle;
+      height: 40px;
+      width: 53%; }
+  .reg-carga .list .carga-reg {
+    margin: 0;
+    padding: 0; }
+    .reg-carga .list .carga-reg label {
+      margin: 0;
+      padding: 0; }
+      .reg-carga .list .carga-reg label span {
+        max-width: 100%;
+        width: 100%;
+        background-color: #DEDADA;
+        color: #757575;
+        text-align: center; }
+      .reg-carga .list .carga-reg label input {
+        max-width: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        text-align: center; }
+      .reg-carga .list .carga-reg label select {
+        border: 0;
+        text-align: center; }
+
+.reg-carga .btn-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 999; }
+  .reg-carga .btn-footer .btn-salvar {
+    width: 80%;
+    margin-left: 9%;
+    border-color: transparent;
+    border-radius: 0;
+    background-color: #49E25E;
+    color: #fff; }
+    .reg-carga .btn-footer .btn-salvar:hover {
+      color: #fff; }
+  .reg-carga .btn-footer .btn-cancelar {
+    width: 80%;
+    margin-left: 9%;
+    border-color: transparent;
+    border-radius: 0;
+    background-color: #FFD95E;
+    color: #fff; }
+    .reg-carga .btn-footer .btn-cancelar:hover {
+      color: #fff; }
+
+.reg-alimentacao .list {
+  min-height: 560px; }
+  .reg-alimentacao .list .alimentacao-title {
+    background-color: #1E8CBE; }
+    .reg-alimentacao .list .alimentacao-title .icon-routes {
+      width: 10%;
+      display: block;
+      float: left;
+      margin-left: 15px; }
+    .reg-alimentacao .list .alimentacao-title p {
+      text-align: center;
+      font-size: 24px;
+      color: #fff;
+      display: table-cell;
+      vertical-align: middle;
+      height: 40px;
+      width: 53%; }
+  .reg-alimentacao .list .alimentacao-reg {
+    margin: 0;
+    padding: 0; }
+    .reg-alimentacao .list .alimentacao-reg label {
+      margin: 0;
+      padding: 0; }
+      .reg-alimentacao .list .alimentacao-reg label span {
+        max-width: 100%;
+        width: 100%;
+        background-color: #DEDADA;
+        color: #757575;
+        text-align: center; }
+      .reg-alimentacao .list .alimentacao-reg label input {
+        max-width: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        text-align: center; }
+      .reg-alimentacao .list .alimentacao-reg label select {
+        border: 0;
+        text-align: center; }
+
+.reg-alimentacao .btn-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 999; }
+  .reg-alimentacao .btn-footer .btn-salvar {
+    width: 80%;
+    margin-left: 9%;
+    border-color: transparent;
+    border-radius: 0;
+    background-color: #49E25E;
+    color: #fff; }
+    .reg-alimentacao .btn-footer .btn-salvar:hover {
+      color: #fff; }
+  .reg-alimentacao .btn-footer .btn-cancelar {
+    width: 80%;
+    margin-left: 9%;
+    border-color: transparent;
+    border-radius: 0;
+    background-color: #FFD95E;
+    color: #fff; }
+    .reg-alimentacao .btn-footer .btn-cancelar:hover {
+      color: #fff; }
+
 @font-face {
   font-family: "Segoe UI"; }
 
