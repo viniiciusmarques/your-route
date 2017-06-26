@@ -11134,6 +11134,13 @@ a.button {
 @font-face {
   font-family: "Segoe UI"; }
 
+.modal-backdrop .scroll-content {
+  background-color: #E4E4E4; }
+
+.modal-backdrop .list .item {
+  background-color: #1E8CBE;
+  color: #fff; }
+
 body.stop-scrolling {
   height: 100%;
   overflow: hidden; }
