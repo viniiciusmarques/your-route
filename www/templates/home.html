@@ -1,27 +1,9 @@
 <ion-view view-title="Home" class="home">
   <ion-content>
-    <div class="row rotas">
-      <button type="button" class="button button-energized" ng-click="continuarRota()">Continuar</button>
-      <button type="button" class="button button-energized" ng-click="continuarOcorrencia()">Ocorrencias</button>
+    <div class="row minhas-rotas" ui-sref="menu.myRoutes">
     </div>
-    <div class="row minhasRotas">
-      <img src="" alt="">
-    </div>
-    <div class="row sincronizacao">
+    <div class="row home-div">
       <div class="sincronizar" ng-click="sincronizar()">
-        <img src="" alt="">
-        <p>Sincronizar</p>
       </div>
-      <div class="configuracao">
-        <img src="" alt="">
-        <p>Configuração</p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="emergencia">
-        <img src="" alt="">
-        <p>Numeros de Emergência</p>
-      </div>
-    </div>
   </ion-content>
 </ion-view>

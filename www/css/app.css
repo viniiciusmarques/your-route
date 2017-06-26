@@ -9935,6 +9935,23 @@ a.button {
   background-color: #F9E878 !important;
   color: #000 !important; }
 
+.home ion-content {
+  background: url("../img/home.png") no-repeat; }
+
+.home .minhas-rotas {
+  width: 100%;
+  position: absolute;
+  height: 175px;
+  top: 175px;
+  background: transparent; }
+
+.home .sincronizacao {
+  position: absolute;
+  height: 175px;
+  top: 350px;
+  background: transparent;
+  width: 48%; }
+
 .sidebar .info-user {
   padding-bottom: 0 !important;
   margin-bottom: 0 !important; }
